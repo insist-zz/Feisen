@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>pro</title>
+		<link rel="stylesheet" href="css/comcss/emui.css" />
+		<link rel="stylesheet" href="css/comcss/com.css" />
+		<link rel="stylesheet" href="css/about.css" />
+	</head>
+	<body>
+		<div id="app">
+			<my-nav></my-nav>
+			
+			<article>
+				<div class="articlebox">
+					<!--面包屑导航-->
+					<div class="breadNavbox">
+						<el-breadcrumb class="breadcrumb" v-cloak>
+							<el-breadcrumb-item v-for="(item,index) in breadcrumb">
+								<a v-on:click="jumpFn(item,index)">{{ item }}</a>
+							</el-breadcrumb-item>
+						</el-breadcrumb>
+					</div>
+					
+					<div class="content-body">
+						<!--子导航-->
+						<div class="c-header">
+							<el-row>
+								<el-col :span="8">
+									<div class="c-h-left">
+										<p>About Us</p>
+										<p>关于我们</p>
+									</div>
+								</el-col>
+								<el-col :span="16">
+									<div class="c-h-right" v-cloak>
+										<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" active-text-color="#409EFF" @select="tabsCutFn">
+											<el-menu-item v-for="(item,index) in activeName" :index="index">{{ item }}</el-menu-item>
+										</el-menu>
+									</div>
+								</el-col>
+							</el-row>
+						</div>
+						<div class="c-body">
+							<div class="c-b cb0" v-show="activeShow[0]"> 
+								<div class="imgbox">
+									<img src="img/a.jpg" />
+								</div>
+								<div class="cb0-content">
+									<el-row :gutter="40">
+										<el-col :span="4">
+											<p class="cb-p-title">
+												<span class="cb-title">企业简介</span>
+												<span class="cb-line"></span>
+												<span class="cb-stitle">INTRODUCTION</span>
+											</p>
+										</el-col>
+										<el-col :span="20">
+											<div class="section">
+												<p>艾未创意水泥涂装项目，是非森新型装饰材料连锁机构与美国艾迪康特（IDEDCRETE）装饰性混凝土共同组建的创意水泥涂装品牌，主要致力于纳米水泥涂装行业的研发及推广。</p>
+												<p>项目总部平台设立于河北秦皇岛，专注于新型装饰材料，自2012年起在全国范围内推广新型、环保、快装、功能性材料多年，在国内拥有稳定的行业内客户群体和成熟的服务团队，总部团队包括技术部，设计部，销售部，客服部，营销部、电商部、财务部多个部门。</p>
+												<p>总部对合作伙伴提供全方位的支持，包括水泥涂装技术指导、项目设计咨询、定向客户推荐、指定客服对接服务、产品市场推广指导、项目运营指导、品牌建设支持、专业产品配送等。</p>
+											</div>
+										</el-col>
+									</el-row>
+								</div>
+							</div>
+							<div class="c-b cb1" v-show="activeShow[1]"> 
+								<div class="cb0-content">
+									<el-row :gutter="40">
+										<el-col :span="8">
+											<p class="cb-p-title" style="margin-top: 60px;">
+												<span class="cb-title">总裁致辞</span>
+												<span class="cb-line"></span>
+												<span class="cb-stitle"></span>
+											</p>
+										</el-col>
+										<el-col :span="16">
+											<div class="cb1-title">
+												<p>
+													<span>名称</span>
+													<span>(职务)</span>
+												</p>
+											</div>
+											<div class="section">
+												<p>艾未创意水泥涂装项目，是非森新型装饰材料连锁机构与美国艾迪康特（IDEDCRETE）装饰性混凝土共同组建的创意水泥涂装品牌，主要致力于纳米水泥涂装行业的研发及推广。</p>
+												<p>项目总部平台设立于河北秦皇岛，专注于新型装饰材料，自2012年起在全国范围内推广新型、环保、快装、功能性材料多年，在国内拥有稳定的行业内客户群体和成熟的服务团队，总部团队包括技术部，设计部，销售部，客服部，营销部、电商部、财务部多个部门。</p>
+												<p>总部对合作伙伴提供全方位的支持，包括水泥涂装技术指导、项目设计咨询、定向客户推荐、指定客服对接服务、产品市场推广指导、项目运营指导、品牌建设支持、专业产品配送等。</p>
+											</div>
+										</el-col>
+									</el-row>
+								</div>
+							</div>
+							<div class="c-b cb2" v-show="activeShow[2]"> 
+								<!--Management Team-->
+								<div class="mangbox">
+									<div class="m-titlebox">
+										Management Team
+									</div>
+									<el-row class="man-itembox" v-for="item in 5">
+										<el-col :span="6">
+											<div class="m-i-left">
+												<p class="m-i-left-l">
+													NAME<br/>
+													／DUTY
+												</p>
+												<p class="m-i-left-r">
+													<span class="name">&nbsp;/&nbsp; 吴 广</span>
+													<span class="job">&nbsp;/&nbsp; 总裁</span>
+												</p>
+											</div>
+										</el-col>
+										<el-col :span="18">
+											<div class="m-i-right">
+												<p>十年渠道招商实际操作经验，熟知广告策划与传播，精通渠道销售与招商技巧，对市场变化捕捉能力卓越，是业界广受好评的青年创业导师，亚洲国际餐饮旅游联盟会北京分会副会长、巨臣东方（北京）文化传播有限公司创始人、北京渠道速建网络科技有限公司联合创始人、北京米尼投资管理有限公司创始人。</p>
+											</div>
+										</el-col>
+									</el-row>
+								</div>
+							</div>
+							<div class="c-b cb3" v-show="activeShow[3]"> 
+								<div class="imgbox">
+									<img src="img/linian.png" />
+								</div>
+								<div class="qiyeln1">
+									<el-row :gutter="60">
+										<el-col :span="16">
+											<div class="qyln-left">
+												<div class="qy-l-title">
+													<p>打造最具幸福力的人文企业</p>
+													<span class="qy-line"></span>
+												</div>
+												<p class="qytext">秉承“利他，推动伟大”的核心价值观，渠道速建为企业成功提供全面支持，为行业发展做出巨大贡献。在企业壮大实力的同时，我们也同样重视员工成长，从多维度为员工成长提供广阔平台和人文关怀，尊重员工意愿，聆听员工心声，让员工参与到企业建设中来，提升员工企业存在感和幸福感。我们深知，渠道速建的未来基于每位员工的辛勤付出，人才是企业走向未来的关键所在。帮助员工不断成长，持续为社会创造价值，是渠道速建义不容辞的责任和使命。</p>
+											</div>
+										</el-col>
+										<el-col :span="8">
+											<div class="qyln-right">
+												<img src="img/linian1.png" />
+											</div>
+										</el-col>
+									</el-row>
+								</div>
+								<div class="qiyeln2">
+									<div class="qy-l-title">
+										<p>企业理念</p>
+										<span class="qy-line"></span>
+									</div>
+									<div class="qiyelnitembox">
+										<el-row :gutter="60">
+											<el-col :span="12">
+												<div class="qyln2-item">
+													<div class="qyln2i-l">
+														企业使命
+													</div>
+													<div class="qyln2i-r">
+														<p class="qyln2i-r-text">推动连锁行业渠道升级</p>
+													</div>
+												</div>
+											</el-col>
+											<el-col :span="12">
+												<div class="qyln2-item">
+													<div class="qyln2i-l">
+														企业愿景
+													</div>
+													<div class="qyln2i-r">
+														<p class="qyln2i-r-text">打造最具幸福力的人文企业</p>
+													</div>
+												</div>
+											</el-col>
+										</el-row>
+										<el-row :gutter="60">
+											<el-col :span="12">
+												<div class="qyln2-item">
+													<div class="qyln2i-l">
+														企业价值
+													</div>
+													<div class="qyln2i-r">
+														<p class="qyln2i-r-text">利他，推动伟大！</p>
+													</div>
+												</div>
+											</el-col>
+											<el-col :span="12">
+												<div class="qyln2-item">
+													<div class="qyln2i-l">
+														企业精神
+													</div>
+													<div class="qyln2i-r">
+														<p class="qyln2i-r-text">明道 利他 开放 精进 感恩</p>
+													</div>
+												</div>
+											</el-col>
+										</el-row>
+									</div>
+								</div>
+								<div class="qiyeln3">
+									<div class="qy-l-title">
+										<p>渠道风采</p>
+										<span class="qy-line"></span>
+									</div>
+									<div class="qiyeln3box">
+										<img src="img/qudaofengcai/qudaofengcai.png" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</article>
+			
+			<b-menu></b-menu>
+			
+			<!--footer-->
+			<footer-box></footer-box>
+			
+		</div>
+	</body>
+	<script src="js/comjs/vue2.5.16.js"></script>
+	<script src="js/comjs/emui.js"></script>
+	<script src="js/comjs/rely.js"></script>
+	<script type="text/javascript" src="js/comjs/nav.js" ></script>
+	<script>
+		//banner解决拉伸问题
+		//设置banner图片宽度为1920px,
+		//根据屏幕宽度，计算缩放的比例，然后把高度也缩放同等比例
+		//计算出来的值赋值给图片和图片盒子的高度属性
+		var app=new Vue({
+			el:'#app',
+			data:{
+				breadcrumb:[
+					'返回首页','关于我们','企业简介'
+				],
+				activeName:['企业简介','总裁致辞','管理团队','企业理念'],
+				activeIndex:0,
+				activeShow:[true,false,false,false]
+			},
+			methods:{
+				jumpFn:function(item,index){
+					console.log(item)
+					console.log(index)
+					if(item == '返回首页'){
+						sessionStorage.setItem('navindex','0')
+						window.open('index.html','_self')
+					}else if(item == '关于我们'){
+						this.breadcrumb = ['返回首页','关于我们','企业简介'];
+						this.activeShow[this.activeIndex]=false;
+						this.activeShow[0]=true;
+						this.activeIndex=0;
+					}
+				},
+				tabsCutFn:function(index){
+					this.breadcrumb = ['返回首页','关于我们',this.activeName[index]];
+					this.activeShow[this.activeIndex]=false;
+					this.activeShow[index]=true;
+					this.activeIndex=index;
+				}
+			},
+			mounted:function(){
+				
+			}
+		})
+	</script>
+</html>

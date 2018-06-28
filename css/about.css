@@ -1,0 +1,127 @@
+
+/*面包屑导航重置*/
+.breadNavbox{
+	width: 94%;height: 26px;border-bottom:1px solid #0D6FB8 ;
+	padding: 10px 20px 0 20px;margin: 0 auto;
+	}
+.el-breadcrumb {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.content-body{
+	width: 92%;margin: 0 auto;padding-bottom:20px;height: auto;
+}
+.c-header{height: 100px;border-bottom:1px solid #b5b5b6;}
+.c-h-left{float: left;height: 60px;margin-top: 20px;}
+.c-h-left p:first-child{line-height: 30px;font-size: 22px;font-weight: 700; text-align: left;}
+.c-h-left p:last-child{line-height: 30px;font-size: 16px;text-align: left;}
+.c-h-right{float: right;height: 40px;margin-top: 40px;}
+
+.c-h-right .el-menu--horizontal>.el-menu-item {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    color: #909399;
+}
+.c-h-right .el-menu--horizontal{border:none;}
+.c-h-right .el-menu-item{font-size:14px;}
+
+
+.c-body{height: auto;width: 100%;}
+.cb{height: auto;width: 100%;}
+.imgbox{width: 100%;height: auto;padding: 30px 0;}
+.imgbox img{display: block;width: 100%;height: auto;}
+.cb0-content{border-bottom: 1px solid #c9cacb;}
+
+.cb-p-title{width: 100%;height: auto;}
+.cb-p-title span{display: block;}
+.cb-title{line-height: 40px;font-size: 28px;font-weight: 700;text-align: center;color: #333333;}
+.cb-line{width: 100px;height: 1px;background: #888888;margin: 10px auto;}
+.cb-stitle{line-height: 30px;font-size: 16px;text-align: center;color: #888888;}
+
+/*段落*/
+.section{height: auto;}
+.section p{
+	color: #727171;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    padding-bottom: 36px;
+    text-align: justify;
+}
+
+
+/*总裁致辞*/
+.cb1-p-title{margin-top: 60px;}
+.cb1-title{width: 100%;height: auto;}
+.cb1-title p{height: 60px;margin: 60px 0 20px 0;border-bottom: 1px solid #898989;}
+.cb1-title p span{float: left;margin-right: 20px;}
+.cb1-title p span:first-child{font-weight: 900;font-size: 26px;line-height: 60px;}
+.cb1-title p span:last-child{font-weight: 700;font-size: 18px;line-height: 60px;}
+
+
+
+/*管理团队*/
+.m-titlebox{text-align: left;font-size: 28px;color: #666666;margin-top:30px;line-height: 50px;
+border-bottom: 4px solid #0d6fb8;}
+.man-itembox{margin:10px auto;height: 180px;}
+
+.m-i-left{height: 180px;width: 100%;padding: 50px 20px;box-sizing: border-box;background: #cfe6f7;}
+.m-i-left-l{line-height: 30px;height: 60px; 
+    color: #595757;font-size: 16px;margin: 10px 0;float: left;}
+.m-i-left-r{
+	height: 80px;color: #595757;float: right;
+    border: 1px solid #666666;border-radius: 4px;
+    width:80px;box-sizing: border-box;
+    }  
+.m-i-left-r span{
+	display: block;
+	}      
+.m-i-left-r .name{line-height:40px;font-size: 20px;font-weight: 900;color: #000000;}
+.m-i-left-r .job{line-height:30px;font-size: 16px;font-weight: 700;color: #666666;}
+
+.m-i-right{background: #f6f6f5;box-sizing: border-box;padding:20px;height: 180px;}
+
+
+/*企业理念*/
+.cb3{padding: 50px 0;}
+.qiyeln1{height: 250px;margin: 30px 0;}
+.qy-l-title{height: 60px;padding-bottom: 19px;position: relative;box-sizing: border-box;}
+.qy-l-title p{    
+	color: #0d6fb8;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 19px;border-bottom: 1px solid #dcdddd;}
+    
+.qy-l-title span{width: 126px;height: 4px;background: #0d6fb8;display: block;
+position: absolute;left: 0;bottom: 0;}
+.qyln-left .qytext{color: #898989;
+    font-size: 16px;line-height: 30px;    padding-top: 30px;}
+.qyln-right{padding-top: 20px;}
+.qyln-right img{width: 100%;height:auto;margin: 0 auto;}
+
+
+.qiyelnitembox{padding: 40px 0;}
+.qyln2-item{height: 126px;margin-bottom: 30px;position: relative;width: 100%;}
+.qyln2i-l{width: 126px;height: 126px;text-align: center;
+    line-height: 114px;
+    color: #0d6fb8;
+    font-size: 21px;
+    font-weight: bold;border:6px solid #0d6fb8;border-radius: 66px;box-sizing: border-box;
+}
+
+.qyln2i-r{width: 100%;position: absolute;height: 126px;left: 0;padding:35px 0 0 126px;box-sizing: border-box;top: 0;}
+.qyln2i-r-text{
+	width: 340px;height: 50px;margin:0 auto;
+	border:1px dotted #0d6fb8;
+	border-radius: 25px;
+	line-height: 48px;
+	color: #898989;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;}
+.qiyeln3box{margin: 30px 0;}    
+ .qiyeln3box img{display: block;width: 100%;height: auto;}   

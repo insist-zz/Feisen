@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>pro</title>
+		<link rel="stylesheet" href="css/comcss/emui.css" />
+		<link rel="stylesheet" href="css/comcss/com.css" />
+		<link rel="stylesheet" href="css/news.css" />
+	</head>
+	<body>
+		<div id="app">
+			<my-nav></my-nav>
+			
+			<article>
+				<div class="articlebox">
+					<!--面包屑导航-->
+					<div class="breadNavbox">
+						<el-breadcrumb class="breadcrumb" v-cloak>
+							<el-breadcrumb-item v-for="(item,index) in breadcrumb">
+								<a v-on:click="jumpFn(item,index)">{{ item }}</a>
+							</el-breadcrumb-item>
+						</el-breadcrumb>
+					</div>
+					
+					<div class="content-body">
+						<!--子导航-->
+						<div class="c-header">
+							<el-row>
+								<el-col :span="10">
+									<div class="c-h-left">
+										<p>News</p>
+										<p>新闻中心</p>
+									</div>
+								</el-col>
+								<el-col :span="14">
+									<div class="c-h-right">
+										<el-radio-group v-model="type" @change="typeCutFn">
+									      <el-radio-button label="行业资讯"></el-radio-button>
+									      <el-radio-button label="企业动态"></el-radio-button>
+									    </el-radio-group>
+									</div>
+								</el-col>
+							</el-row>
+						</div>
+						<div class="c-body">
+							<div class="c-b cb0" v-show="typeShow[0]"> 
+								<div class="cb-leftbox">
+									<img src="img/news/news.png" />
+									<ul v-cloak>
+										<li v-for="item in leftnewslist">
+											<a>{{ item.title }}</a>
+											<span></span>
+										</li>
+									</ul>
+								</div>
+								<div class="cb-rightbox">
+									<ul v-cloak>
+										<li v-for="item in leftnewslist">
+											<img class="itemBimg" :src="item.imgsrc" />
+											<div class="ncenter"></div>
+											<div class="newsitembox">
+												<div class="newslistb">
+													<p class="topText">
+														<i class="el-icon-time"></i>
+														<span>{{ item.date }}</span>
+														<img src="img/icon/pl.png" />
+														<span>{{ item.comment }}</span>
+													</p>
+													<p class="cenTitle">
+														{{ item.title }}
+													</p>
+													<p class="icon">
+														<img src="img/icon/sousuo.png" />
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="c-b cb0" v-show="typeShow[1]"> 
+								<div class="cb-leftbox">
+									<img src="img/news/news.png" />
+									<ul v-cloak>
+										<li v-for="item in leftnewslist">
+											<a>{{ item.title }}</a>
+											<span></span>
+										</li>
+									</ul>
+								</div>
+								<div class="cb-rightbox">
+									<ul v-cloak>
+										<li v-for="item in leftnewslist">
+											<img class="itemBimg" :src="item.imgsrc" />
+											<div class="ncenter"></div>
+											<div class="newsitembox">
+												<div class="newslistb">
+													<p class="topText">
+														<i class="el-icon-time"></i>
+														<span>{{ item.date }}</span>
+														<img src="img/icon/pl.png" />
+														<span>{{ item.comment }}</span>
+													</p>
+													<p class="cenTitle">
+														{{ item.title }}
+													</p>
+													<p class="icon">
+														<img src="img/icon/sousuo.png" />
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</article>
+			
+			<b-menu></b-menu>
+			
+			<!--footer-->
+			<footer-box></footer-box>
+		</div>
+	</body>
+	<script src="js/comjs/vue2.5.16.js"></script>
+	<script src="js/comjs/emui.js"></script>
+	<script src="js/comjs/rely.js"></script>
+	<script type="text/javascript" src="js/comjs/nav.js" ></script>
+	<script>
+		//banner解决拉伸问题
+		//设置banner图片宽度为1920px,
+		//根据屏幕宽度，计算缩放的比例，然后把高度也缩放同等比例
+		//计算出来的值赋值给图片和图片盒子的高度属性
+		var app=new Vue({
+			el:'#app',
+			data:{
+				type:'行业资讯',
+				typeShow:[true,false],
+				breadcrumb:[
+					'返回首页','新闻中心','行业资讯'
+				],
+				leftnewslist:[
+					{title:'这7个问题没弄明白，千万别急着做加盟!',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10},
+					{title:'没招对加盟商的5种风险，你必须要知道！',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10},
+					{title:'品牌商和加盟商，要做到这1点才能“不分手”',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10},
+					{title:'每个想要有所作为的餐饮人，心中都有一个沙县',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10},
+					{title:'news list title',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10},
+					{title:'news list title',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10},
+					{title:'news list title',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10},
+					{title:'news list title',id:'',imgsrc:'img/news/newslist1.png',date:'2018-08-08',icon:'',comment:10}
+				]
+			},
+			methods:{
+				jumpFn:function(item,index){
+					console.log(item)
+					console.log(index)
+					if(item == '返回首页'){
+						sessionStorage.setItem('navindex','0')
+						window.open('index.html','_self')
+					}else if(item=='新闻中心'){
+						this.typeShow=[true,false];
+						this.breadcrumb[2] = '行业资讯';
+					}
+				},
+				typeCutFn:function(item){
+					this.type=item;
+					if(item == '行业资讯'){
+						this.typeShow=[true,false];
+						this.breadcrumb[2] = '行业资讯'
+					}else if(item == '企业动态'){
+						this.typeShow=[false,true];
+						this.breadcrumb[2] = '企业动态'
+					}
+				}
+			},
+			mounted:function(){
+				$('.cb0').css('height',$('.cb-rightbox').height())
+			}
+		})
+	</script>
+</html>

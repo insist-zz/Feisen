@@ -1,0 +1,70 @@
+/*重置tabs框*/
+.el-radio-button__inner {
+    padding: 14px 30px;
+    background:#e8e9e9;
+    color:#666666;
+}
+.el-radio-button__orig-radio:checked+.el-radio-button__inner {
+    background-color: #0d6fb8;
+    border-color: #0d6fb8;
+    -webkit-box-shadow: -1px 0 0 0 #0d6fb8;
+    box-shadow: -1px 0 0 0 #0d6fb8;
+}
+/*面包屑导航重置*/
+.breadNavbox{
+	width: 94%;height: 26px;border-bottom:1px solid #0D6FB8 ;
+	padding: 10px 20px 0 20px;margin: 0 auto;
+	}
+.el-breadcrumb {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.content-body{
+	width: 92%;margin: 0 auto;padding-bottom:20px;height: auto;
+}
+.c-header{height: 100px;border-bottom:1px solid #b5b5b6;}
+.c-h-left{float: left;height: 60px;margin-top: 20px;}
+.c-h-left p:first-child{line-height: 30px;font-size: 22px;font-weight: 700; text-align: left;}
+.c-h-left p:last-child{line-height: 30px;font-size: 16px;text-align: left;}
+.c-h-right{float: right;height: 40px;margin-top: 40px;}
+
+.c-body{height: auto;width: 100%;padding: 30px 0;}
+.cb0{height: auto;width: 100%;position: relative;}
+.cb-leftbox{width: 280px;height: auto;
+position: absolute;z-index: 1;left: 0;top: 0;}
+.cb-leftbox img{width: 280px;height: 85px;display: block;}
+.cb-leftbox ul{width: 280px;height: auto;}
+.cb-leftbox ul li{
+	width: 280px;height:46px;line-height: 46px;position: relative;
+	border-bottom: 1px solid #e8e9e9;text-indent:10px;}
+.cb-leftbox ul li:hover{border-bottom: 1px solid #0d6fb8;}
+.cb-leftbox ul li a{color: #727171;font-size: 12px;cursor: pointer;}
+.cb-leftbox ul li a:hover{color:#0d6fb8;}
+.cb-leftbox ul li span{display: block;
+	width: 4px;height: 4px;background: #0d6fb8;
+	position: absolute;left: 2px;top: 22px;border-radius: 4px;}
+
+.cb-rightbox{position: absolute;box-sizing: border-box;
+	width: 100%;left: 0;top: 0;padding:0 0 0 300px;height: auto;z-index: 0;}
+.cb-rightbox ul{width: 100%;height: auto;}
+.cb-rightbox ul li{width: 100%;height:120px;position: relative;margin-bottom: 20px;}
+.itemBimg{width: 190px;height:120px;display: block;
+position: relative;left: 0;top: 0;z-index: 1;}
+.ncenter{background: white;width: 20px;height: 120px;position: absolute;
+left: 190px;top: 0;z-index: 2;}
+.cb-rightbox ul li .newsitembox{width: 100%;height:120px;position: absolute;background: #e8e9e9;
+left: 0;top: 0;padding:0 0 0 210px;box-sizing: border-box;z-index: 0;}
+.cb-rightbox ul li .newsitembox:hover{background: #2EB2FD;}
+
+.newslistb{width: 100%;height:120px;box-sizing: border-box;
+padding: 20px 30px;position: relative;}
+.topText{line-height: 20px;width: 100%;color: #a4a5a6;font-size: 12px;height: 20px;}
+.topText img{width: 12px;height: 12px;margin-right:6px;}
+.topText span{margin-right:10px;}
+.topText i{font-size: 14px;}
+.cenTitle{height: 40px;line-height: 40px;font-size: 24px;
+    color: #333333;margin-top: 15px;width: 100%;margin-top: 20px;cursor: pointer;}
+.icon{width: 40px;height: 40px;position: absolute;right: 30px;top:60px;}
+.icon img{width: 30px;height: 30px;display: block;margin:5px;}
+/*.cenTitle:hover{color: white;}*/

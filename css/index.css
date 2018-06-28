@@ -1,0 +1,114 @@
+
+
+/*首页*/
+
+/*banner*/
+.bannerbox{width: 100%;height: 300px;}
+
+/*优势*/
+.advan-title{width: 100%;line-height: 40px;font-size: 16px;font-weight: 700;text-align: center;
+	letter-spacing:10px;margin-bottom: 20px;}
+.advan-box{
+	width: 100%;box-sizing: border-box;padding: 20px;height: auto;
+}
+.advan-box .el-col{line-height: 100px;text-align: center;}
+
+
+/*//案例*/
+.casebox{width: 100%;box-sizing: border-box;padding: 20px 20px 50px 20px;height: auto;}
+.case_title{width: 100%;height: 40px;border-bottom: 2px solid #b1b1b1;position: relative;}
+.case_title p{width: 200px;text-align:center;font-size: 16px;font-weight: 700;
+line-height: 40px;margin: 0 auto;}
+.case_title span{width: 200px;height: 4px;background: #414141;position: absolute;
+left: 50%;margin-left:-100px;bottom: -2px;z-index: 1;}
+
+/*案例图片*/
+.caseimg_box{width:1230px;height: 450px;margin: 20px auto;}
+.caseimg-one{width: 300px;height: 450px;position: relative; margin-left:10px ;float: left;}
+.caseimg-one:last-child{margin:0;}
+.caseimg-one img{width: 300px;height: 450px;}
+.caseimg-one .card{padding: 20px 0; width: 300px;height:60px;position: absolute;left: 0;bottom: 0;background: #7a7a7a;}
+.caseimg-one .card p{width: 300px;line-height: 30px;text-align: center;color: white;cursor: pointer;}
+
+
+/*新闻动态*/
+.newsbox{width: 100%;box-sizing: border-box;padding: 0 50px;}
+.newleft,.newright{width: 100%;}
+.el-card__body {
+	height: 400px;
+    padding: 10px 20px;
+}
+.tradebox{position: relative;width: 100%;height: 400px;}
+.tradeimg{background: white; width: 156px;height: 400px;overflow-y:auto;position: absolute;left: 0;top: 0;z-index: 1;}
+.tradeimg img{width: 140px;height: 140px; margin-bottom: 10px;border: none;display: block;}
+
+.treadtextbox{position: absolute; width: 100%;height:400px;padding: 10px 20px 10px 166px;
+left: 0;top: 0;box-sizing: border-box;z-index:0;z-index: 0;}
+
+
+/*右侧新闻列表*/
+.newright ul{height: 400px;width: 100%;}
+.newright ul li{cursor: pointer; position: relative; height: 30px;box-sizing: border-box;border-bottom: 1px #c5c5c5 dashed;}
+.newright ul li .p1:hover{color: #66b1ff;}
+.newright ul li .p1{text-align: left; font-size: 14px;float: left;width: 280px;line-height: 30px;margin-left: 20px;}
+.newright ul li .p2{text-align: right;font-size: 12px;float: right;width: 100px;line-height: 30px;}
+.newright ul li span{position: absolute;width: 6px;height: 6px;position: absolute;
+left: 6px;top: 12px;border-radius: 8px;background: #888888;}
+
+
+
+
+
+
+
+
+/*//滚动条*/
+.tradeimg::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px;
+    }
+.tradeimg::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 10px;
+         -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: #b3b3b3;
+    }
+.tradeimg::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        background: #EDEDED;
+    }
+/*重置卡片头部下划线*/
+.el-card__header{border-bottom:1px solid #acacac}
+
+.treadbox{width: 100%;height: 380px;}
+.treadbox .b-title{
+    font-size: 26px;
+    color: #333333;
+    line-height: 40px;
+    font-weight: normal;
+    letter-spacing: -1px;}
+.treadbox .s-title{
+    line-height: 30px;
+}   
+.treadbox .s-title span:first-child{
+	font-size: 16px;
+	color: #333333;
+	float: left;
+}
+.treadbox .s-title span:last-child{
+	font-size: 14px;
+	color: #888888;
+	float: right;
+}
+.treadbox .b-content{
+	width: 100%;
+    overflow: hidden;
+    color: #666;
+    height:260px;
+    line-height: 24px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    text-indent: 10px;
+}
+.morebox{
+	height: 50px;font-size: 20px;text-align: center;}

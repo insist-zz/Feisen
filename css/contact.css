@@ -1,0 +1,85 @@
+
+/*面包屑导航重置*/
+.breadNavbox{
+	width: 94%;height: 26px;border-bottom:1px solid #0D6FB8 ;
+	padding: 10px 20px 0 20px;margin: 0 auto;
+	}
+.el-breadcrumb {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.content-body{
+	width: 92%;margin: 0 auto;padding-bottom:20px;height: auto;
+}
+.c-header{height: 100px;border-bottom:1px solid #b5b5b6;}
+.c-h-left{float: left;height: 60px;margin-top: 20px;}
+.c-h-left p:first-child{line-height: 30px;font-size: 22px;font-weight: 700; text-align: left;}
+.c-h-left p:last-child{line-height: 30px;font-size: 16px;text-align: left;}
+.c-h-right{float: right;height: 40px;margin-top: 40px;}
+
+.c-h-right .el-menu--horizontal>.el-menu-item {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    color: #909399;
+}
+.c-h-right .el-menu--horizontal{border:none;}
+.c-h-right .el-menu-item{font-size:14px;}
+
+
+.c-body{height: auto;width: 100%;}
+.cb{height: auto;width: 100%;}
+.imgbox{width: 100%;height: auto;padding: 30px 0;}
+.imgbox img{display: block;width: 100%;height: auto;}
+.cb0-content{padding: 30px 0;}
+
+.cb-p-title{width: 100%;height: auto;}
+.cb-p-title span{display: block;}
+.cb-title{line-height: 40px;font-size: 28px;font-weight: 700;text-align: center;color: #333333;}
+.cb-line{width: 100px;height: 1px;background: #888888;margin: 10px auto;}
+.cb-stitle{line-height: 30px;font-size: 16px;text-align: center;color: #888888;}
+
+
+.section{padding-bottom:30px;height: auto;border-bottom: 1px solid #c9cacb;}
+.sec-title{
+	color: #333333;
+    font-size: 28px;
+    line-height: 40px;
+    padding-bottom: 8px;text-align: justify;
+    border-bottom:1px solid #e9e9e9;
+}
+.sec-left,.sec-right{padding: 20px 0;}
+.sec-left p{
+	color: #727171;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    text-align: justify;
+}
+.sec-right img{
+	width: 120px;height: 120px;display: block;
+}
+.sec-box{height: auto;}
+
+.add-title{
+	color: #333333;
+    font-size: 18px;
+    line-height: 30px;
+}
+.add-text span{
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+.add-text span:first-child{
+	color: #727171;
+    font-size: 12px;
+}
+.add-text span:last-child{
+	color: #333333;
+    font-size: 14px;
+}
+

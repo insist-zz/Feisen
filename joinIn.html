@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>pro</title>
+		<link rel="stylesheet" href="css/comcss/emui.css" />
+		<link rel="stylesheet" href="css/comcss/com.css" />
+		<link rel="stylesheet" href="css/joinIn.css" />
+	</head>
+	<body>
+		<div id="app">
+			<my-nav></my-nav>
+			
+			<article>
+				<div class="articlebox">
+					<!--面包屑导航-->
+					<div class="breadNavbox">
+						<el-breadcrumb class="breadcrumb" v-cloak>
+							<el-breadcrumb-item v-for="(item,index) in breadcrumb">
+								<a v-on:click="jumpFn(item,index)">{{ item }}</a>
+							</el-breadcrumb-item>
+						</el-breadcrumb>
+					</div>
+					
+					<div class="content-body">
+						<!--子导航-->
+						<div class="c-header">
+							<el-row>
+								<el-col :span="24">
+									<div class="c-h-left">
+										<p>Attract Investment</p>
+										<p>招商加盟</p>
+									</div>
+								</el-col>
+							</el-row>
+						</div>
+						<div class="c-body">
+							<div class="c-b cb0"> 
+								<div class="imgbox">
+									<img src="img/linian.png" />
+								</div>
+								<div class="cb0-content">
+									<el-row :gutter="40">
+										<el-col :span="4">
+											<p class="cb-p-title">
+												<span class="cb-title">加盟政策</span>
+												<span class="cb-line"></span>
+												<span class="cb-stitle">Policy</span>
+											</p>
+										</el-col>
+										<el-col :span="20">
+											<div class="section">
+												<p class="sec-title">技术加盟</p>
+												<p class="sec-text">
+													<span>进货价格：</span>
+													<span>经销商价格</span>
+												</p>
+												<p class="sec-text">
+													<span>进货方式：</span>
+													<span>市代（没有市代从总部进货）</span>
+												</p>
+												<p class="sec-text">
+													<span>加盟费用：</span>
+													<span>货款20000，培训服务费6800</span></p>
+												<p class="sec-text">
+													<span>任务要求：</span>
+													<span>无</span></p>
+												<p class="sec-text">
+													<span>分配方案：</span>
+													<span>货款全员提点，培训服务费按岗位分配</span></p>
+											</div>
+											<div class="section">
+												<p class="sec-title">城市代理</p>
+												<p class="sec-text">
+													<span>进货价格：</span>
+													<span>代理商价格</span></p>
+												<p class="sec-text">
+													<span>进货方式：</span>
+													<span>总部进货</span></p>
+												<p class="sec-text">
+													<span>加盟费用：</span>
+													<span>货款30000，培训服务费6800,代理费10000，保证金10000</span></p>
+												<p class="sec-text">
+													<span>任务要求：</span>
+													<span>20万/年</span></p>
+												<p class="sec-text">
+													<span>分配方案：</span>
+													<span>货款全员提点，培训服务费按岗位分配，加盟费按比例和单品公司分配</span></p>
+											</div>
+										</el-col>
+									</el-row>
+								</div>
+								
+								<div class="cb0-content">
+									<el-row :gutter="40">
+										<el-col :span="4">
+											<p class="cb-p-title">
+												<span class="cb-title">服务支持</span>
+												<span class="cb-line"></span>
+												<span class="cb-stitle">Service Support</span>
+											</p>
+										</el-col>
+										<el-col :span="20">
+											<div class="section1">
+												<p class="sec-text">
+													<span>咨询服务支持：</span>
+													<span>品牌项目分析、市场评估、投资分析</span>
+												</p>
+												<p class="sec-text">
+													<span>培训服务支持：</span>
+													<span>培训服务、管理培训、技术培训、远程培训、代招代培</span>
+												</p>
+												<p class="sec-text">
+													<span>项目开店支持：</span>
+													<span>选址服务、店面装修指导、营销支持</span></p>
+												<p class="sec-text">
+													<span>后期运营支持：</span>
+													<span>采购配送、产品升级、市场调研、活动推广策划</span></p>
+											</div>
+										</el-col>
+									</el-row>
+								</div>
+							</div>
+						
+							
+						</div>
+					</div>
+					
+				</div>
+			</article>
+			
+			<b-menu></b-menu>
+			
+			<!--footer-->
+			<footer-box></footer-box>
+			
+		</div>
+	</body>
+	<script src="js/comjs/vue2.5.16.js"></script>
+	<script src="js/comjs/emui.js"></script>
+	<script src="js/comjs/rely.js"></script>
+	<script type="text/javascript" src="js/comjs/nav.js" ></script>
+	<script>
+		//banner解决拉伸问题
+		//设置banner图片宽度为1920px,
+		//根据屏幕宽度，计算缩放的比例，然后把高度也缩放同等比例
+		//计算出来的值赋值给图片和图片盒子的高度属性
+		var app=new Vue({
+			el:'#app',
+			data:{
+				breadcrumb:[
+					'返回首页','招商加盟'
+				]
+			},
+			methods:{
+				jumpFn:function(item,index){
+					console.log(item)
+					console.log(index)
+					if(item == '返回首页'){
+						sessionStorage.setItem('navindex','0')
+						window.open('index.html','_self')
+					}
+				}
+			},
+			mounted:function(){
+				
+			}
+		})
+	</script>
+</html>
