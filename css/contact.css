@@ -83,3 +83,22 @@
     font-size: 14px;
 }
 
+.ctimgbox{height: auto;width: 100%;position: relative;}
+.fullimg{width: 100%;height: auto;}
+.contactbox{width: 400px;height: 300px;position: absolute;bottom: 0;right: 0;z-index: 1;}
+
+.infobox{width: 300px;margin-left: 80px;}
+.infobox .el-form-item {
+    margin-bottom: 12px;
+}
+.infobox .el-input__inner {
+    height: 30px;
+    line-height: 30px;
+}
+.infobox .el-form-item__label {
+    font-size: 14px;
+    color: white;
+    line-height: 40px;
+}
+.adsbox{width: auto;height: 80px;line-height: 30px;padding: 10px 0;box-sizing: border-box;
+font-size: 16px;color: white;text-align: left;}

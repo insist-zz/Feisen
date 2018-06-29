@@ -35,107 +35,28 @@
 							</el-row>
 						</div>
 						<div class="c-body">
-							<div class="c-b cb0"> 
-								<div class="imgbox">
-									<img src="img/contact.png" />
+							<div class="ctimgbox">
+								<img class="fullimg" src="img/contact.jpg" />
+								<div class="contactbox">
+									<p class="infobox">
+										<el-form label-position="right" label-width="80px" :model="from">
+										  <el-form-item label="姓名">
+										    <el-input v-model="from.name"></el-input>
+										  </el-form-item>
+										  <el-form-item label="Email">
+										    <el-input v-model="from.eamil"></el-input>
+										  </el-form-item>
+										  <el-form-item label="电话">
+										    <el-input v-model="from.tel"></el-input>
+										  </el-form-item>
+										</el-form>
+									</p>
+									<p class="adsbox">
+										非森新型装饰材料连锁机构 咨询热线 : 400-0335-009<br/>
+										地址 : 河北省秦皇岛市海港区文坛路远洋商务大厦19层
+									</p>
 								</div>
-								<div class="cb0-content">
-									<el-row :gutter="40">
-										<el-col :span="6">
-											<p class="cb-p-title">
-												<span class="cb-title">联系我们</span>
-												<span class="cb-line"></span>
-												<span class="cb-stitle">Contact Us</span>
-											</p>
-										</el-col>
-										<el-col :span="18">
-											<div class="section">
-												<p class="sec-title">非森新型装饰材料</p>
-												<div class="sec-box">
-													<el-row :gutter="40">
-														<el-col :span="18">
-															<div class="sec-left">
-																<p>总部地址 : 北京市朝阳区来广营中街朝来科技产业园创远路36号院3号楼）</p>
-																<p>企业邮箱 : hi@qussdaosujian.com</p>
-																<p>企业微信订阅号 :qudssaosujian</p>
-															</div>
-														</el-col>
-														<el-col :span="6">
-															<div class="sec-right">
-																<img src="img/erweima.png" />
-															</div>
-														</el-col>
-													</el-row>
-												</div>
-											</div>
-											<div class="section">
-												<div class="sec-box">
-													<el-row :gutter="40">
-														<el-col :span="12">
-															<div class="sec-right">
-																<p class="add-title">秦皇岛城市代理</p>
-																<p class="add-text">
-																	<span>地址：</span>
-																	<span>秦皇岛市海港区太阳城新天地商务中心A座</span>
-																</p>
-																<p class="add-text">
-																	<span>电话：</span>
-																	<span>0335-7180653</span>
-																</p>
-															</div>
-														</el-col>
-														<el-col :span="12">
-															<div class="sec-right">
-																<p class="add-title">郑州城市代理</p>
-																<p class="add-text">
-																	<span>地址：</span>
-																	<span>郑州市金水区经三路财富广场5号楼6层</span>
-																</p>
-																<p class="add-text">
-																	<span>电话：</span>
-																	<span>0371-55283698</span>
-																</p>
-															</div>
-														</el-col>
-													</el-row>
-													
-													<el-row :gutter="40">
-														<el-col :span="12">
-															<div class="sec-right">
-																<p class="add-title">石家庄城市代理</p>
-																<p class="add-text">
-																	<span>地址：</span>
-																	<span>石家庄市裕华区裕华东路106-1号金领大厦2号楼2单元904</span>
-																</p>
-																<p class="add-text">
-																	<span>电话：</span>
-																	<span>0331-80827259</span>
-																</p>
-															</div>
-														</el-col>
-														<el-col :span="12">
-															<div class="sec-right">
-																<p class="add-title">合肥城市代理</p>
-																<p class="add-text">
-																	<span>地址：</span>
-																	<span>合肥市包河区芜湖路万达广场6号楼2901-2902</span>
-																</p>
-																<p class="add-text">
-																	<span>电话：</span>
-																	<span>0551-63633609</span>
-																</p>
-															</div>
-														</el-col>
-													</el-row>
-												</div>
-											</div>
-										</el-col>
-									</el-row>
-								</div>
-								
 							</div>
-						
-							
 						</div>
 					</div>
 					
@@ -160,7 +81,12 @@
 			data:{
 				breadcrumb:[
 					'返回首页','联系我们'
-				]
+				],
+				from:{
+					name:'',
+					email:'',
+					tel:''
+				}
 			},
 			methods:{
 				jumpFn:function(item,index){
