@@ -37,89 +37,52 @@
 						<div class="c-body">
 							<div class="c-b cb0"> 
 								<div class="imgbox">
-									<img src="img/linian.png" />
+									<img src="img/join.png" />
 								</div>
 								<div class="cb0-content">
-									<el-row :gutter="40">
-										<el-col :span="4">
-											<p class="cb-p-title">
-												<span class="cb-title">加盟政策</span>
-												<span class="cb-line"></span>
-												<span class="cb-stitle">Policy</span>
-											</p>
-										</el-col>
-										<el-col :span="20">
-											<div class="section">
-												<p class="sec-title">技术加盟</p>
-												<p class="sec-text">
-													<span>进货价格：</span>
-													<span>经销商价格</span>
-												</p>
-												<p class="sec-text">
-													<span>进货方式：</span>
-													<span>市代（没有市代从总部进货）</span>
-												</p>
-												<p class="sec-text">
-													<span>加盟费用：</span>
-													<span>货款20000，培训服务费6800</span></p>
-												<p class="sec-text">
-													<span>任务要求：</span>
-													<span>无</span></p>
-												<p class="sec-text">
-													<span>分配方案：</span>
-													<span>货款全员提点，培训服务费按岗位分配</span></p>
-											</div>
-											<div class="section">
-												<p class="sec-title">城市代理</p>
-												<p class="sec-text">
-													<span>进货价格：</span>
-													<span>代理商价格</span></p>
-												<p class="sec-text">
-													<span>进货方式：</span>
-													<span>总部进货</span></p>
-												<p class="sec-text">
-													<span>加盟费用：</span>
-													<span>货款30000，培训服务费6800,代理费10000，保证金10000</span></p>
-												<p class="sec-text">
-													<span>任务要求：</span>
-													<span>20万/年</span></p>
-												<p class="sec-text">
-													<span>分配方案：</span>
-													<span>货款全员提点，培训服务费按岗位分配，加盟费按比例和单品公司分配</span></p>
-											</div>
-										</el-col>
-									</el-row>
+									<div class="con-titlebox">
+										<h3>加盟流程</h3>
+									</div>
+									<div class="section">
+										<p>1 提供完成的经营模式，涵盖经营全过程</p>
+										<p>2 行业市场空白。利润空间搞。</p>
+										<p>3 绿色 节能环保的绿色装饰材料，未来行业发展方向</p>
+										<p>4 个性空间，改造空间，功能性空间。产品定位符合当下行业需求。</p>
+										<p>5 工作室模式，店中店模式，标准店模式</p>
+									</div>
+									<img class="joinLimg" src="img/joinL.png" />
+									<div class="tablebox">
+										<el-table :data="tableData" border style="width: 100%">
+										    <el-table-column
+										      prop="type"
+										      label="类型">
+										    </el-table-column>
+										    <el-table-column
+										      prop="area"
+										      label="面积">
+										    </el-table-column>
+										    <el-table-column
+										      prop="money"
+										      label="投资金额">
+										    </el-table-column>
+										  </el-table>
+									</div>
+									
+									<div class="con-titlebox">
+										<h3>培训流程</h3>
+									</div>
+									<div class="section1">
+										<p>计划培训时间2-5天</p>
+										<p>讲解纳米水泥配套产品使用方法</p>
+										<p>讲解施工操作流程(配比，养护时间)</p>
+										<p>施工演示教学(各工序一遍)</p>
+										<p>学员练习(各工序两遍)</p>
+										<p>施工中问题指导</p>
+										<p>创意施工方法讲解以及演示</p>
+										<p>学习总结</p>
+									</div>
 								</div>
 								
-								<div class="cb0-content">
-									<el-row :gutter="40">
-										<el-col :span="4">
-											<p class="cb-p-title">
-												<span class="cb-title">服务支持</span>
-												<span class="cb-line"></span>
-												<span class="cb-stitle">Service Support</span>
-											</p>
-										</el-col>
-										<el-col :span="20">
-											<div class="section1">
-												<p class="sec-text">
-													<span>咨询服务支持：</span>
-													<span>品牌项目分析、市场评估、投资分析</span>
-												</p>
-												<p class="sec-text">
-													<span>培训服务支持：</span>
-													<span>培训服务、管理培训、技术培训、远程培训、代招代培</span>
-												</p>
-												<p class="sec-text">
-													<span>项目开店支持：</span>
-													<span>选址服务、店面装修指导、营销支持</span></p>
-												<p class="sec-text">
-													<span>后期运营支持：</span>
-													<span>采购配送、产品升级、市场调研、活动推广策划</span></p>
-											</div>
-										</el-col>
-									</el-row>
-								</div>
 							</div>
 						
 							
@@ -150,7 +113,12 @@
 			data:{
 				breadcrumb:[
 					'返回首页','招商加盟'
-				]
+				],
+				tableData:[
+				{type:'工作室',area:'不限',money:26800},
+				{type:'店中店',area:'30',money:56800},
+				{type:'标准店',area:'100',money:156800}
+					]
 			},
 			methods:{
 				jumpFn:function(item,index){

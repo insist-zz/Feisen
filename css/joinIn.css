@@ -34,33 +34,49 @@
 .cb{height: auto;width: 100%;}
 .imgbox{width: 100%;height: auto;padding: 30px 0;}
 .imgbox img{display: block;width: 100%;height: auto;}
-.cb0-content{border-bottom: 1px solid #c9cacb;padding: 30px 0;}
 
-.cb-p-title{width: 100%;height: auto;}
-.cb-p-title span{display: block;}
-.cb-title{line-height: 40px;font-size: 28px;font-weight: 700;text-align: center;color: #333333;}
-.cb-line{width: 100px;height: 1px;background: #888888;margin: 10px auto;}
-.cb-stitle{line-height: 30px;font-size: 16px;text-align: center;color: #888888;}
+
+
+.cb0-content{border-bottom: 1px solid #c9cacb;padding: 30px 0;width: 100%;}
+
+.con-titlebox{width: 100%;text-align: center;
+    border-bottom: 1px solid #898989;margin-top: 30px;
+	}
+.con-titlebox h3{font-size: 32px;margin: 0;
+    color: #4a4947;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 17px;border-bottom: 5px solid #4a4947;}
+
 
 /*段落*/
-.section{height: auto;width: 50%;float: left;}
-.section1{height: auto;}
-.sec-text span{
-    line-height: 30px;
-    letter-spacing: 0.5px;
-    text-align: justify;
-}
-.sec-text span:first-child{
-	color: #727171;
-    font-size: 14px;
-}
-.sec-text span:last-child{
-	color: #333333;
+.section{height: auto;width: 100%;padding: 20px 0;}
+.section1{height: auto;width: 100%;padding: 40px 0 20px 0;}
+.section1 p{
+	width: 100%;
+	color: #4a4947;
     font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    text-align: center;
 }
-.sec-title{
-	color: #409EFF;
-    font-size: 20px;
-    line-height: 36px;
-    padding-bottom: 16px;text-align: justify;
+.section p{
+	width: 100%;
+	color: #4a4947;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    text-align: center;
+}
+.joinLimg{width: 80%;height: auto;display: block;margin: 10px auto;}
+.tablebox{width: 80%;margin: 10px auto;}
+.cell{text-align: center;color: #4d4948;font-size: 18px;}
+.el-table--border, .el-table--group {
+    border: 1px solid #4d4948;
+}
+.el-table td, .el-table th.is-leaf {
+    border-bottom: 1px solid #4d4948;
+}
+.el-table--border td, .el-table--border th, .el-table__body-wrapper .el-table--border.is-scrolling-left~.el-table__fixed {
+    border-right: 1px solid #4d4948;
 }
