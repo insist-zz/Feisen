@@ -15,9 +15,10 @@
 				<div class="articlebox">
 				
 					<div class="bannerbox">
-						<el-carousel height="300px">
+						<!-- v-bind:style="{ height: bannerimgheight+'px'}"-->
+						<el-carousel v-bind:height="bannerimgheight">
 					      <el-carousel-item v-for="item in bannerData" :key="item">
-					        <img style="width: 100%;height:300px;" :src="item.src" :alt="item.text" @click="console.log(item.url)" />
+					        <img style="display: block;width: 100%;" v-bind:style="{ height: bannerimgheight}" :src="item.src" :alt="item.text" @click="console.log(item.url)" />
 					      </el-carousel-item>
 					    </el-carousel>
 					</div>
@@ -39,29 +40,8 @@
 							<span></span>
 						</div>
 						<div class="caseimg_box">
-							<div class="caseimg-one">
+							<div class="caseimg-one" v-for="item in anlinum">
 							    <img src="img/k.jpg">
-							    <div class="card">
-							    	<p>标题</p>
-							    	<p>操作</p>
-							    </div>
-							</div>
-							<div class="caseimg-one">
-							    <img src="img/l.jpg">
-							    <div class="card">
-							    	<p>标题</p>
-							    	<p>操作</p>
-							    </div>
-							</div>
-							<div class="caseimg-one">
-							    <img src="img/c.jpg">
-							    <div class="card">
-							    	<p>标题</p>
-							    	<p>操作</p>
-							    </div>
-							</div>
-							<div class="caseimg-one">
-							    <img src="img/w.jpg">
 							    <div class="card">
 							    	<p>标题</p>
 							    	<p>操作</p>
@@ -151,13 +131,15 @@
 		var app=new Vue({
 			el:'#app',
 			data:{
+				anlinum:12,
 				//导航默认选中项
 				activeIndex:'1',
 				bannerData:[
-					{src:'img/a.jpg',url:'a',text:'备注'},
-					{src:'img/b.jpg',url:'b',text:'备注'},
-					{src:'img/c.jpg',url:'c',text:'备注'}
-				]
+					{src:'img/a.png',url:'a',text:'备注'},
+					{src:'img/b.png',url:'b',text:'备注'},
+					{src:'img/c.png',url:'c',text:'备注'}
+				],
+				bannerimgheight:'0px'
 			},
 			methods:{
 				openMore:function(){
@@ -166,6 +148,19 @@
 				}
 			},
 			mounted:function(){
+				console.log($(document).width())
+				//计算图片宽高
+				var that=this,fullwidth=$(document).width();
+				//h=ih*(fw/iw)
+					var img_url ='img/a.png';
+					var img = new Image();
+					img.src = img_url;
+					img.onload = function(){
+					 console.log('width:'+img.width+',height:'+img.height);
+					 console.log(img.height*(fullwidth/img.width))
+					 that.bannerimgheight=parseInt(img.height*(fullwidth/img.width))+'px'
+					};
+				
 				
 			}
 		})

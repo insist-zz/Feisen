@@ -1,17 +1,20 @@
 
 
 /*首页*/
-
+.el-carousel__container {
+    position: relative;
+}
 /*banner*/
-.bannerbox{width: 100%;height: 300px;}
+.bannerbox{width: 100%;}
 
 /*优势*/
-.advan-title{width: 100%;line-height: 40px;font-size: 16px;font-weight: 700;text-align: center;
-	letter-spacing:10px;margin-bottom: 20px;}
 .advan-box{
 	width: 100%;box-sizing: border-box;padding: 20px;height: auto;
 }
-.advan-box .el-col{line-height: 100px;text-align: center;}
+.advan-title{width: 100%;line-height: 80px;font-size: 30px;font-weight: 700;text-align: center;
+	letter-spacing:10px;margin-bottom: 20px;}
+
+.advan-box .el-col{line-height: 200px;text-align: center;font-size: 24px;}
 
 
 /*//案例*/
@@ -22,10 +25,14 @@ line-height: 40px;margin: 0 auto;}
 .case_title span{width: 200px;height: 4px;background: #414141;position: absolute;
 left: 50%;margin-left:-100px;bottom: -2px;z-index: 1;}
 
+
 /*案例图片*/
-.caseimg_box{width:1230px;height: 450px;margin: 20px auto;}
-.caseimg-one{width: 300px;height: 450px;position: relative; margin-left:10px ;float: left;}
-.caseimg-one:last-child{margin:0;}
+.caseimg_box{
+	width:100%;height: auto;margin: 20px auto;
+	display: -webkit-flex; display: flex;
+	 justify-content:space-around;align-items:center;flex-wrap:wrap;
+}
+.caseimg-one{width: 300px;height: 450px;position: relative;margin-bottom: 20px;}
 .caseimg-one img{width: 300px;height: 450px;}
 .caseimg-one .card{padding: 20px 0; width: 300px;height:60px;position: absolute;left: 0;bottom: 0;background: #7a7a7a;}
 .caseimg-one .card p{width: 300px;line-height: 30px;text-align: center;color: white;cursor: pointer;}
@@ -51,7 +58,7 @@ left: 0;top: 0;box-sizing: border-box;z-index:0;z-index: 0;}
 .newright ul li{cursor: pointer; position: relative; height: 30px;box-sizing: border-box;border-bottom: 1px #c5c5c5 dashed;}
 .newright ul li .p1:hover{color: #66b1ff;}
 .newright ul li .p1{text-align: left; font-size: 14px;float: left;width: 280px;line-height: 30px;margin-left: 20px;}
-.newright ul li .p2{text-align: right;font-size: 12px;float: right;width: 100px;line-height: 30px;}
+.newright ul li .p2{text-align: right;font-size: 12px;float: right;width: 160px;line-height: 30px;}
 .newright ul li span{position: absolute;width: 6px;height: 6px;position: absolute;
 left: 6px;top: 12px;border-radius: 8px;background: #888888;}
 
