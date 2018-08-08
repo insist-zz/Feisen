@@ -12,11 +12,12 @@ Vue.component('my-nav', {
 				'<nav class="navbox" v-cloak>'+
 					'<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" active-text-color="#409EFF" @select="cutNav">'+
 					  '<el-menu-item index="0">首页</el-menu-item>'+
-					  '<el-menu-item index="1">关于我们</el-menu-item>'+
-					  '<el-menu-item index="2">成功案例</el-menu-item>'+
-					  '<el-menu-item index="3">新闻中心</el-menu-item>'+
-					  '<el-menu-item index="4">招商加盟</el-menu-item>'+
-					  '<el-menu-item index="5">联系我们</el-menu-item>'+
+					  '<el-menu-item index="1">产品中心</el-menu-item>'+
+					  '<el-menu-item index="2">各项服务</el-menu-item>'+
+					  '<el-menu-item index="3">成功案例</el-menu-item>'+
+					  '<el-menu-item index="4">新闻中心</el-menu-item>'+
+					  '<el-menu-item index="5">招商加盟</el-menu-item>'+
+					  '<el-menu-item index="6">联系我们</el-menu-item>'+
 					'</el-menu>'+
 				'</nav>'+
 			'</header>',
@@ -28,14 +29,16 @@ Vue.component('my-nav', {
         	if(key == '0'){
 						window.open('index.html','_self')
 					}else if(key == '1'){
-						window.open('aboutUs.html','_self')
+						window.open('productCenter.html','_self')
 					}else if(key == '2'){
-						window.open('succeedCase.html','_self')
+						window.open('channelService.html','_self')
 					}else if(key == '3'){
-						window.open('news.html','_self')
+						window.open('succeedCase.html','_self')
 					}else if(key == '4'){
-						window.open('joinIn.html','_self')
+						window.open('news.html','_self')
 					}else if(key == '5'){
+						window.open('joinIn.html','_self')
+					}else if(key == '6'){
 						window.open('contact.html','_self')
 					}
         }

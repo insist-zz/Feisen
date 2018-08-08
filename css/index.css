@@ -118,4 +118,9 @@ left: 6px;top: 12px;border-radius: 8px;background: #888888;}
     text-indent: 10px;
 }
 .morebox{
-	height: 50px;font-size: 20px;text-align: center;}
+	height: 50px;font-size: 20px;text-align: center;
+}
+
+.el-carousel__arrow{
+	width: 50px;height: 50px;font-size: 18px;
+}

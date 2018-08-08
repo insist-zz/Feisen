@@ -1,0 +1,163 @@
+
+/*面包屑导航重置*/
+.breadNavbox{
+	width: 94%;height: 26px;border-bottom:1px solid #0D6FB8 ;
+	padding: 10px 20px 0 20px;margin: 0 auto;
+	}
+.el-breadcrumb {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.content-body{
+	width: 92%;margin: 0 auto;padding-bottom:20px;height: auto;max-width: 1300px;
+}
+.c-header{height: 100px;border-bottom:1px solid #b5b5b6;}
+.c-h-left{float: left;height: 60px;margin-top: 20px;}
+.c-h-left p:first-child{line-height: 30px;font-size: 22px;font-weight: 700; text-align: left;}
+.c-h-left p:last-child{line-height: 30px;font-size: 16px;text-align: left;}
+.c-h-right{float: right;height: 40px;margin-top: 40px;}
+
+.c-h-right .el-menu--horizontal>.el-menu-item {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    color: #909399;
+}
+.c-h-right .el-menu--horizontal{border:none;}
+.c-h-right .el-menu-item{font-size:14px;}
+
+
+.c-body{height: auto;width: 100%;}
+
+.cb-item{
+	height: auto;width: 100%;border-bottom: 1px solid #c9cacb;margin: 30px 0;
+}
+.cbi-titlebox{width: 100%;text-align: center;
+    border-bottom: 1px solid #898989;position: relative;
+	}
+.cbi-titlebox h3{font-size: 28px;margin: 0;
+    color: #333333;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 17px;
+    }
+.cbi-titlebox p{
+	position: absolute;width: 180px;height: 5px;left: 50%;margin-left: -90px;
+	bottom: -2px;background: #27b7f8;
+}
+
+
+/*上面三大块*/
+.topThreeBox{
+	width: 1160px;margin: 50px auto 200px auto;height: auto;
+}
+.topThreeItem{
+	width: 300px;height: 500px;background: white;border:1px solid white;
+	border-radius: 20px;
+}
+.tti1{float: left;}
+.tti2{margin: 0 auto;}
+.tti3{float: right;}
+
+.tti-cir1{
+	width: 100px;height: 100px;border: 8px solid #e5525c;color: #e5525c;font-size: 24px;
+	text-align: center;line-height: 84px;box-sizing: border-box;margin: 30px auto 40px auto;
+	font-weight: bold;border-radius: 50px;
+}
+.tti-cir2{
+	width: 100px;height: 100px;border: 8px solid #055eae;color: #055eae;font-size: 24px;
+	text-align: center;line-height: 84px;box-sizing: border-box;margin: 30px auto 40px auto;
+	font-weight: bold;border-radius: 50px;
+}
+.tti-cir3{
+	width: 100px;height: 100px;border: 8px solid #fbce67;color: #fbce67;font-size: 24px;
+	text-align: center;line-height: 84px;box-sizing: border-box;margin: 30px auto 40px auto;
+	font-weight: bold;border-radius: 50px;
+}
+.tti-title{
+	width: 280px;height: 30px;line-height: 30px;text-align: center;margin-bottom: 70px;
+	font-size: 20px;
+}
+.tti-title1{color: #e5525c;}
+.tti-title2{color: #055eae;}
+.tti-title3{color: #fbce67;}
+
+.tti-content{
+	width: 180px;height: 184px;box-sizing: border-box;padding: 10px 0;
+	line-height: 40px;font-size: 18px;text-align: left;margin: 0 auto;
+}
+.tti-content1{color: #e5525c;border-top: 2px solid #e5525c;border-bottom: 2px solid #e5525c;}
+.tti-content2{color: #055eae;border-top: 2px solid #055eae;border-bottom: 2px solid #055eae;}
+.tti-content3{color: #fbce67;border-top: 2px solid #fbce67;border-bottom: 2px solid #fbce67;}
+
+
+
+/*卡片*/
+.cardItemBox{
+	width: 1160px;margin: 0 auto;height: 280px;border-radius: 20px;border:1px solid white;
+	padding: 0 80px 0 80px;box-sizing: border-box;position: relative;
+}
+.textimg{
+	position: absolute;width: 124px;height: 124px;display: block;border: none;
+	left: 80px;top: -24px;
+}
+.rightTitle{
+	position: absolute;color: #333333;width: auto;height: 30px;line-height: 30px;
+	font-size: 20px;text-align: left;left: 210px;top: 70px;
+}
+.centerLine{
+	position: absolute;background: #6ec2ee;width: 100%;height: 4px;
+	left: 80px;top: 114px;
+}
+.leftTitle{
+	position: absolute;width: auto;height: auto;
+	left: 80px;top: 124px;color: #78bde4;font-size: 40px;font-weight: bold;
+}
+.rightContentbox{
+	position: absolute;top: 124px;right: 40px;height: 90px;
+}
+.rightContentbox p{
+	width: auto;height: 30px;
+}
+.rightContentbox p span:first-child{
+	color: #333333;float: left;margin-left: 10px;line-height: 30px;
+}
+.rightContentbox p span:last-child{
+	color: #666666;float: left;line-height: 30px;
+}
+
+
+/*流程图*/
+.flowBox{
+	width: 1160px;height: auto;margin-bottom: 30px;
+}
+.flowBox img{
+	width: 1160px;height: auto;display: block;magrin:0 auto;
+}
+
+
+
+.cbi-content{
+	width: 800px;margin: 30px auto;font-size: 18px;color: #111111;
+	line-height: 30px;height: auto;text-align: left;font-family: "微软雅黑";
+}
+
+.kuaiImg{
+	width: 400px;height: 550px;display: block;
+}
+.kuaiContent1 p{
+	text-align: right;
+}
+.kuaiContent2 p{
+	text-align: left;
+}
+.kuaiContent{
+	padding-top: 200px;box-sizing: border-box;width: 400px;
+}
+.kuaiContent p{
+	width: 100%;height: auto;line-height: 30px;font-size: 18px;color: #333333;
+	text-align: left;
+}

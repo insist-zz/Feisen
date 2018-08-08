@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>pro</title>
+		<link rel="stylesheet" href="css/comcss/emui.css" />
+		<link rel="stylesheet" href="css/comcss/com.css" />
+		<link rel="stylesheet" href="css/about.css" />
+	</head>
+	<body>
+		<div id="app">
+			<my-nav></my-nav>
+			
+			<article>
+				<div class="articlebox">
+					<!--面包屑导航-->
+					<div class="breadNavbox">
+						<el-breadcrumb class="breadcrumb" v-cloak>
+							<el-breadcrumb-item v-for="(item,index) in breadcrumb">
+								<a v-on:click="jumpFn(item,index)">{{ item }}</a>
+							</el-breadcrumb-item>
+						</el-breadcrumb>
+					</div>
+					
+					<div class="content-body">
+						<!--子导航-->
+						<div class="c-header">
+							<el-row>
+								<el-col :span="8">
+									<div class="c-h-left">
+										<p>Product center</p>
+										<p>产品中心</p>
+									</div>
+								</el-col>
+								<el-col :span="16">
+									<div class="c-h-right" v-cloak>
+										<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" active-text-color="#409EFF" @select="tabsCutFn">
+											<el-menu-item v-for="(item,index) in activeName" :index="index">{{ item }}</el-menu-item>
+										</el-menu>
+									</div>
+								</el-col>
+							</el-row>
+						</div>
+						<div class="c-body">
+							<div class="c-b cb0" v-show="activeShow[0]"> 
+								<div class="imgbox">
+									<img src="img/product/z1.jpg" />
+								</div>
+								<div class="tc-box">
+									<div class="tc-titleBox">
+										<p>产品特性</p>
+										<hr></hr>
+										<p>Product features</p>
+									</div>
+									<p class="tc-content">
+										纳米水泥，一种水泥材料，采用国外先进科技工艺，在水泥原料生产过程中加入纳米级元素，使传统的水泥拥有了独特的质感和特性。 
+纳米水泥的厚度仅为3mm，施工简单，能够真实还原清水混凝土的质感。其具有不易开裂、耐磨、不易落灰、不吃水不吃油等特性。
+由于纳米水泥粘度高强度大，可以说各种空间都可以涂刷。室内墙面、顶面、地面、桌面、家具、台面、厨房卫生间空间都可以施工。改造项目中的瓷砖、玻璃基层也可以直接施工。特殊的属性使材料应用空间灵活性非常大，随心创造梦想中的生活。
+									</p>
+								</div>
+								<div class="tc-box">
+									<div class="tc-titleBox">
+										<p>市场优势</p>
+										<hr></hr>
+										<p>Market advantage</p>
+									</div>
+									<p class="tc-content">
+									水泥涂装已经在欧美流行多年，目前清水混凝土风格风靡全国，会持续很长一段时间，可以确认拥有非常大的市场需求空间。
+纳米水泥的特性，让它可以用在室内外的任何空间。借助设计师延伸出很多项目空间应用，室内空间、户外门头、外墙空间、翻新工程、工艺品、加工、特殊行业功能性需求。
+产品多元化，成品水泥装饰系列产品，多风格，多功能性组合。
+
+									</p>
+								</div>
+							</div>
+							<div class="c-b cb1" v-show="activeShow[1]"> 
+								<div class="sekabox">
+									<div class="sekaitem" v-for="item in sekaImgs">
+										<img :src="item.url" />
+										<span>{{item.name}}</span>
+									</div>
+								</div>
+							</div>
+							<div class="c-b cb2" v-show="activeShow[2]"> 
+								
+								<div class="applyBox applyBox1">
+									<img src="img/product/apply/caohuise.jpg" />
+									<div class="applyTx">
+										<div class="atxtl">
+											<span class="one"></span>
+											<span class="two"></span>
+											<span class="three"></span>
+											<span class="four"></span>
+											<p class="five">餐厅</p>
+										</div>
+										<p class="atxct1">餐厅的桌面(平面和立面)</p>
+										<p class="atxct">
+											常规空间墙面，地面都可以涂装(无论什么材质，只要表面平整，都可涂装，粘性极强操作简单)
+										</p>
+									</div>
+								</div>
+								
+								<div class="applyBox applyBox2">
+									<div class="applyTx">
+										<div class="atxtl">
+											<span class="one"></span>
+											<span class="two"></span>
+											<span class="three"></span>
+											<span class="four"></span>
+											<p class="five">厨房</p>
+										</div>
+										
+										<p class="atxct1">厨房的橱柜/台面</p>
+										<p class="atxct">
+											常规空间墙面，地面都可以涂装(无论什么材质，只要表面平整，都可涂装，粘性极强操作简单)
+										</p>
+									</div>
+									<img src="img/product/apply/qianhui211.jpg" />
+								</div>
+								
+								<div class="applyBox applyBox3">
+									<img src="img/product/apply/shuaihui.jpg" />
+									<div class="applyTx">
+										<div class="atxtl">
+											<span class="one"></span>
+											<span class="two"></span>
+											<span class="three"></span>
+											<span class="four"></span>
+											<p class="five">客厅</p>
+										</div>
+										<p class="atxct1">客厅的橱柜/台面</p>
+										<p class="atxct">
+											常规空间墙面，地面都可以涂装(无论什么材质，只要表面平整，都可涂装，粘性极强操作简单)
+										</p>
+									</div>
+								</div>
+								
+								<div class="applyBox applyBox4">
+									<div class="appleft">
+										<div class="applyTx">
+											<div class="atxtl">
+												<span class="one"></span>
+												<span class="two"></span>
+												<span class="three"></span>
+												<span class="four"></span>
+												<p class="five">卧室</p>
+											</div>
+											<p class="atxct1">卧室的墙面</p>
+											<p class="atxct">
+												常规空间墙面，地面都可以涂装(无论什么材质，只要表面平整，都可涂装，粘性极强操作简单)
+											</p>
+										</div>
+										<img src="img/product/apply/woshiLeft.jpg" />
+									</div>
+									<div class="appright">
+										<img src="img/product/apply/wosihRight.jpg" />
+										<div class="applyTx">
+											<div class="atxtl">
+												<span class="one"></span>
+												<span class="two"></span>
+												<span class="three"></span>
+												<span class="four"></span>
+												<p class="five">浴室</p>
+											</div>
+											<p class="atxct1">卧浴室室的墙面</p>
+											<p class="atxct">
+												常规空间墙面，地面都可以涂装(无论什么材质，只要表面平整，都可涂装，粘性极强操作简单)
+											</p>
+										</div>
+									</div>
+								</div>
+								
+								<div class="cbi-titlebox" style="margin-top: 50px;">
+									<h3>家具涂装示意图</h3>
+									<p></p>
+								</div>
+								
+								<div class="imgBox">
+									<div class="imgBoxC">
+										<p>纳米水泥可直接涂刷在任何平整的基材表面</p>
+										<p>纳米水泥有极强的粘性，硬度高且可附着在平面和里面空间</p>
+									</div>
+									<img class="imgB" src="img/product/apply/img1.png" />
+								</div>
+								
+								<div class="imgBox1">
+									<img class="imgB" src="img/product/apply/img2.png" />
+									<div class="imgBoxC">
+										<p>纳米水泥仅有三毫米厚</p>
+										<p>附着在家具墙面不会产生厚重感，不会改变家具原有外形，更不会影响美观</p>
+									</div>
+								</div>
+							</div>
+							<div class="c-b cb3" v-show="activeShow[3]"> 
+								<p class="videoHint">暂无视频，敬请期待!</p>
+								<div class="videoBox">
+									<img src="img/product/video.png" />
+								</div>
+							</div>
+							<div class="c-b cb3" v-show="activeShow[4]"> 
+								<div class="qestTBox">
+									<p>常见问题解答</p>
+								</div>
+								
+								<div class="qestItem">
+									<p>纳米水泥混凝土可以在户外使用吗？</p>
+									<p>这是可以的，纳米水泥混凝土较一般地坪，不能在户外使用，纳米水泥可以提供更好的保护，包括放渗水、防滑、防紫外线等，并可以用在广场、道路、游泳池等</p>
+								</div>
+								<div class="qestItem">
+									<p>纳米水泥混凝土可以在户外使用吗？</p>
+									<p>这是可以的，纳米水泥混凝土较一般地坪，不能在户外使用，纳米水泥可以提供更好的保护，包括放渗水、防滑、防紫外线等，并可以用在广场、道路、游泳池等</p>
+								</div>
+								<div class="qestItem">
+									<p>纳米水泥混凝土可以在户外使用吗？</p>
+									<p>这是可以的，纳米水泥混凝土较一般地坪，不能在户外使用，纳米水泥可以提供更好的保护，包括放渗水、防滑、防紫外线等，并可以用在广场、道路、游泳池等</p>
+								</div>
+								<div class="qestItem">
+									<p>纳米水泥混凝土可以在户外使用吗？</p>
+									<p>这是可以的，纳米水泥混凝土较一般地坪，不能在户外使用，纳米水泥可以提供更好的保护，包括放渗水、防滑、防紫外线等，并可以用在广场、道路、游泳池等</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</article>
+			
+			<b-menu></b-menu>
+			
+			<!--footer-->
+			<footer-box></footer-box>
+			
+		</div>
+	</body>
+	<script src="js/comjs/vue2.5.16.js"></script>
+	<script src="js/comjs/emui.js"></script>
+	<script src="js/comjs/rely.js"></script>
+	<script type="text/javascript" src="js/comjs/nav.js" ></script>
+	<script>
+		//banner解决拉伸问题
+		//设置banner图片宽度为1920px,
+		//根据屏幕宽度，计算缩放的比例，然后把高度也缩放同等比例
+		//计算出来的值赋值给图片和图片盒子的高度属性
+		var app=new Vue({
+			el:'#app',
+			data:{
+				breadcrumb:[
+					'返回首页','关于我们','产品介绍'
+				],
+				activeName:['产品介绍','产品色卡','产品应用','施工工艺','常见问题'],
+				activeIndex:0,
+				activeShow:[true,false,false,false,false],
+				sekaImgs:[
+					{
+						name:"本色灰",
+						url:"img/product/seka/1.jpg"
+					},
+					{
+						name:"草灰",
+						url:"img/product/seka/2.jpg"
+					},
+					{
+						name:"橙色",
+						url:"img/product/seka/3.jpg"
+					},
+					{
+						name:"褐红色",
+						url:"img/product/seka/4.jpg"
+					},
+					{
+						name:"湖蓝色",
+						url:"img/product/seka/5.jpg"
+					},
+					{
+						name:"橘色",
+						url:"img/product/seka/6.jpg"
+					},
+					{
+						name:"绿叶1",
+						url:"img/product/seka/7.png"
+					},
+					{
+						name:"绿叶2",
+						url:"img/product/seka/8.png"
+					},
+					{
+						name:"浅黄色",
+						url:"img/product/seka/9.jpg"
+					},
+					{
+						name:"浅黄色-树叶",
+						url:"img/product/seka/10.jpg"
+					},
+					{
+						name:"浅灰211",
+						url:"img/product/seka/11.jpg"
+					},
+					{
+						name:"浅橘色",
+						url:"img/product/seka/12.jpg"
+					},
+					{
+						name:"浅绿色",
+						url:"img/product/seka/13.jpg"
+					},
+					{
+						name:"深度灰",
+						url:"img/product/seka/14.jpg"
+					},
+					{
+						name:"深灰",
+						url:"img/product/seka/15.jpg"
+					},
+					{
+						name:"深橘色",
+						url:"img/product/seka/16.jpg"
+					},
+					{
+						name:"深绿色",
+						url:"img/product/seka/17.jpg"
+					},
+					{
+						name:"深绿色-树叶",
+						url:"img/product/seka/18.jpg"
+					},
+					{
+						name:"帅灰",
+						url:"img/product/seka/19.jpg"
+					},
+					{
+						name:"烟灰210",
+						url:"img/product/seka/20.jpg"
+					},
+					{
+						name:"烟灰210树叶",
+						url:"img/product/seka/21.png"
+					},
+					{
+						name:"中灰212",
+						url:"img/product/seka/22.jpg"
+					},
+					{
+						name:"中橘色",
+						url:"img/product/seka/23.jpg"
+					}
+				]
+			},
+			methods:{
+				jumpFn:function(item,index){
+					console.log(item)
+					console.log(index)
+					if(item == '返回首页'){
+						sessionStorage.setItem('navindex','0')
+						window.open('index.html','_self')
+					}else if(item == '关于我们'){
+						this.breadcrumb = ['返回首页','关于我们','企业简介'];
+						this.activeShow[this.activeIndex]=false;
+						this.activeShow[0]=true;
+						this.activeIndex=0;
+					}
+				},
+				tabsCutFn:function(index){
+					this.breadcrumb = ['返回首页','关于我们',this.activeName[index]];
+					this.activeShow[this.activeIndex]=false;
+					this.activeShow[index]=true;
+					this.activeIndex=index;
+				}
+			},
+			mounted:function(){
+				
+			}
+		})
+	</script>
+</html>

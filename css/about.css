@@ -55,6 +55,8 @@
 }
 
 
+
+
 /*总裁致辞*/
 .cb1-p-title{margin-top: 60px;}
 .cb1-title{width: 100%;height: auto;}
@@ -136,3 +138,174 @@ position: absolute;left: 0;bottom: 0;}
     display: inline-block;
     font-weight: bold;
     padding-bottom: 17px;border-bottom: 5px solid #333333;}
+    
+
+
+
+/*//产品介绍*/
+.tc-box{
+	width: 100%;max-width:1100px;margin: 20px auto 50px auto;
+	position: relative;
+	}
+.tc-titleBox{
+	position: absolute;left: 0;top: 50px;width: 200px;height: auto;z-index: 1;
+}
+.tc-titleBox p:first-child{
+	color: #333333;font-size: 28px;width: 200px;height: 40px;line-height: 40px;text-align: center;
+	font-weight: bold;
+}
+.tc-titleBox p:last-child{
+	color: #666666;font-size: 18px;width: 200px;height: 30px;line-height: 30px;text-align: center;
+}
+.tc-titleBox hr{
+	margin: 8px auto;width: 140px;display: block;
+}
+.tc-content{
+	width: 100%;padding: 50px 0 0 300px;box-sizing: border-box;
+	font-size: 18px;color: #333333;text-align: left;line-height: 30px;height: auto;
+}
+
+.sekabox{
+	width: 1100px;margin: 0 auto;height: auto;overflow: hidden;
+}
+.sekabox:first-child{
+	margin-top: 40px;
+}
+.sekaitem{
+	width: 200px;height: 372px;float: left;margin-right: 25px;
+}
+.sekaitem:nth-child(5n+0){margin: 0;}
+.sekaitem img{
+	width: 200px;height: 272px;
+	display: block;
+}
+.sekaitem span{display: block; font-size: 16px;color: #333333;text-align: center;line-height: 100px;height: 100px;}
+
+
+
+.cbi-titlebox{width: 100%;text-align: center;
+    border-bottom: 1px solid #898989;position: relative;
+	}
+.cbi-titlebox h3{font-size: 28px;margin: 0;
+    color: #333333;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 17px;
+    }
+.cbi-titlebox p{
+	position: absolute;width: 180px;height: 5px;left: 50%;margin-left: -90px;
+	bottom: -2px;background: #27b7f8;
+}
+
+
+.applyBox{
+	width: 1200px;margin:20px auto;height: auto;overflow: hidden;
+}
+
+.applyBox1 img{width: 670px;height: 800px;display: block;float: left;}
+.applyBox1 .applyTx{width: 530px;height: 800px;box-sizing: border-box;padding-top:200px;float: left;}
+
+
+
+.applyBox2 img{width: 800px;height: 600px;display: block;float: left;}
+.applyBox2 .applyTx{width: 400px;height: 600px;box-sizing: border-box;padding-top:100px;float: left;}
+
+
+.applyBox3 img{width: 840px;height: 560px;display: block;float: left;}
+.applyBox3 .applyTx{width: 360px;height: 560px;box-sizing: border-box;padding-top:100px;float: left;}
+.atxtl span{position: absolute;display: block;width: 20px;height: 20px;box-sizing: border-box;}
+.atxtl{position: relative;margin: 0 auto;  width: 250px;height: 70px;padding: 15px 25px;box-sizing: border-box;background: white;}
+.atxtl .one{left: 0;top: 0;border-left: 2px solid #333333;border-top: 2px solid #333333;}
+.atxtl .two{right: 0;top: 0;border-right: 2px solid #333333;border-top: 2px solid #333333;}
+.atxtl .three{left: 0;bottom: 0;border-left: 2px solid #333333;border-bottom: 2px solid #333333;}
+.atxtl .four{right: 0;bottom: 0;border-right: 2px solid #333333;border-bottom: 2px solid #333333;}
+.atxtl .five{width: 200px;height: 40px;background: #d5b083;color: white;font-size: 24px;line-height: 40px;text-align: center;}
+.atxct1{
+	width: 320px;height: auto;line-height: 30px;font-size: 16px;color: #333333;
+	margin: 30px auto 0 auto;text-align: center;
+}
+.atxct{
+	width: 320px;height: auto;line-height: 30px;font-size: 16px;color: #666666;
+	margin:0 auto;
+}
+
+.applyBox4 .applyTx{width: 580px;height: 600px;box-sizing: border-box;padding-top:200px;float: left;}
+
+.appleft{
+	float: left;width: 580px;margin-right: 40px;height: auto;
+}
+.appleft img{
+	display: block;width: 580px;height: 770px;border: none;
+}
+.appright{
+	float: left;width: 580px;height: auto;
+}
+.appright img{
+	display: block;width: 580px;height: 770px;border: none;
+}
+
+
+.imgBox1{
+	width: 1100px;margin: 50px auto;height: 550px;
+}
+.imgBox1 .imgB{
+	width: 760px;height: 550px;float: left;border: none;
+}
+.imgBox1 .imgBoxC{
+	width: 340px;height: 260px;float: right;margin-top: 150px;background: #d5b083;
+	box-sizing: border-box;border:1px solid #d5b083;
+}
+
+.imgBox1 .imgBoxC p:first-child{
+	color: white;font-size: 18px;line-height: 50px;width: 100%;height: 50px;
+	text-align: center;font-weight: bold;
+	}
+.imgBox1 .imgBoxC p:last-child{
+	color: #764407;font-size: 14px;line-height: 30px;width: 260px;height: auto;
+	text-align: center;margin: 0 auto;
+}
+
+.imgBox{
+	width: 1200px;margin: 50px auto;height: 660px;
+}
+.imgBox .imgB{
+	width: 990px;height: 660px;float: right;border: none;
+}
+.imgBox .imgBoxC{
+	width: 210px;height: 660px;float: left;
+}
+.imgBox .imgBoxC p{
+	color: #333333;font-size: 14px;line-height: 30px;width: 100px;height: auto;margin-left: 50px;
+}
+.imgBox .imgBoxC p:first-child{margin-top: 60px;}
+.imgBox .imgBoxC p:last-child{margin-top: 360px;}
+
+
+.videoBox{
+	width: 1100px;height: auto;margin: 0 auto;
+}
+.videoBox img{
+	display: block;width: 1100px;height: auto;
+}
+.videoHint{
+	font-size: 12px;color: #E5525C;text-align: left;line-height: 30px;width: 1000px;margin: 0 auto;
+}
+
+.qestTBox{
+	width: 1100px;height: 40px;margin: 0px auto 30px auto;background: #CCCCCC;
+}
+.qestTBox p{
+	width: 250px;height: 40px;
+	background: white;font-size:24px;color: #cccccc;text-align: center;line-height: 40px;
+}
+.qestItem{
+	width: 1000px;height:auto;margin: 20px auto;
+}
+.qestItem p:first-child{
+	width: 1000px;height: auto;line-height: 40px;font-size:14px;color:#333333;
+	text-align: left;
+}
+.qestItem p{
+	width: 1000px;height: auto;line-height: 20px;font-size:12px;color:#666666;
+	text-align: left;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>pro</title>
+		<link rel="stylesheet" href="css/comcss/emui.css" />
+		<link rel="stylesheet" href="css/comcss/com.css" />
+		<link rel="stylesheet" href="css/channelService.css" />
+	</head>
+	<body>
+		<div id="app">
+			<my-nav></my-nav>
+			
+			<article>
+				<div class="articlebox">
+					<!--面包屑导航-->
+					<div class="breadNavbox">
+						<el-breadcrumb class="breadcrumb" v-cloak>
+							<el-breadcrumb-item v-for="(item,index) in breadcrumb">
+								<a v-on:click="jumpFn(item,index)">{{ item }}</a>
+							</el-breadcrumb-item>
+						</el-breadcrumb>
+					</div>
+					
+					<div class="content-body">
+						<!--子导航-->
+						<div class="c-header">
+							<el-row>
+								<el-col :span="24">
+									<div class="c-h-left">
+										<p>Channel Service</p>
+										<p>渠道服务</p>
+									</div>
+								</el-col>
+							</el-row>
+						</div>
+						
+						<!--主体内容-->
+						<div class="c-body">
+						
+							<div class="cb-item">
+								<div class="cbi-titlebox">
+									<h3>快速招商,为什么需要——已未水泥？</h3>
+									<p></p>
+								</div>
+								<div class="topThreeBox">
+									<el-row>
+										<el-col :span="8">
+											<div class="topThreeItem z-depth-2 tti1">
+												<div class="tti-cir1">01</div>
+												<div class="tti-title tti-title1">我们明白您的痛点</div>
+												<p class="tti-content tti-content1">
+													同类材料品牌众多，竞争激烈价格战，效果达不到客户要求，急需核心竞争力产品
+												</p>
+											</div>
+										</el-col>
+										<el-col :span="8">
+											<div class="topThreeItem z-depth-2 tti2">
+												<div class="tti-cir2">01</div>
+												<div class="tti-title tti-title2">我们解决您的愿景</div>
+												<p class="tti-content tti-content2">
+													找到新型产品，避免同质化竞争，合作城市高端群体
+												</p>
+											</div>
+										</el-col>
+										<el-col :span="8">
+											<div class="topThreeItem z-depth-2 tti3">
+												<div class="tti-cir3">01</div>
+												<div class="tti-title tti-title3">我们解决您的问题</div>
+												<p class="tti-content tti-content3">
+													一站式服务，直接进去蓝海市场
+												</p>
+											</div>
+										</el-col>
+									</el-row>
+								</div>
+								
+								<div class="cardItemBox">
+									<img class="textimg" src="img/zhuan.jpg" />
+									<p class="rightTitle">资深的服务团队</p>
+									<div class="centerLine"></div>
+									<p class="leftTitle">把握动脉</p>
+									<div class="rightContentbox">
+										<p>
+											<span>专业：</span>
+											<span>专业技术人员，国外团队研发，国内团队培训指导</span>
+										</p>
+										<p>
+											<span>专注：</span>
+											<span>专注水泥产品，不断增加配套产品</span>
+										</p>
+										<p>
+											<span>专属：</span>
+											<span>总部平台为代理商提供专属服务人员</span>
+										</p>
+									</div>
+								</div>
+								
+							</div>
+						
+						
+						
+							
+							<div class="cb-item">
+								<div class="cbi-titlebox">
+									<h3>总部对合作伙伴提供全方位的支持</h3>
+									<p></p>
+								</div>
+								<div class="flowBox">
+									<img src="img/zhuankuaiquan.png" />
+								</div>
+								
+								<div class="cardItemBox">
+									<img class="textimg" src="img/quan.jpg" />
+									<p class="rightTitle">多种空间，不同基材均可施工，满足客户使用全部需求</p>
+									<div class="centerLine"></div>
+									<p class="leftTitle">把握动脉</p>
+									<div class="rightContentbox">
+										<p>
+											<span></span>
+											<span>墙地面、室内外、家具、台面多种应用场景<span>
+										</p>
+										<p>
+											<span></span>
+											<span>平面、纹理、多种颜色、满足不同设计需求</span>
+										</p>
+									</div>
+								</div>
+								
+							</div>
+						
+						
+						
+							
+							<div class="cb-item">
+								<div class="cbi-titlebox">
+									<h3>总部对合作伙伴提供全方位的支持</h3>
+									<p></p>
+								</div>
+								<p class="cbi-content">
+									一种厚度仅为3mm的水泥面层材料，科技含量高，施工简单，还原清水混凝土质感。
+									由于纳米水泥粘度高强度大，可以说各种空间都可以涂刷。墙面装饰、旧房改造，瓷砖 玻璃基层直接施工，桌面、柜子、台面。特殊的属性使
+									材料应用空间灵活性非常大，随心创造梦想中的生活
+								</p>
+								<div class="flowBox">
+									<img src="img/trait.png" />
+								</div>
+								
+								<div class="cardItemBox">
+									<img class="textimg" src="img/kuai.jpg" />
+									<p class="rightTitle">快速掌握施工技术，快速搭建销售渠道推广，快！还可以更快！</p>
+									<div class="centerLine"></div>
+									<p class="leftTitle">把握动脉</p>
+									<div class="rightContentbox">
+										<p>
+											<span></span>
+											<span>快人一步，有时候意味着抢占了更优质的市场<span>
+										</p>
+										<p>
+											<span></span>
+											<span>时间是客户的生命线，高效使我们的保证书</span>
+										</p>
+									</div>
+								</div>
+								
+							</div>
+							
+							
+							<div class="cb-item">
+								
+								<el-row>
+									<el-col :span="12">
+										<img class="kuaiImg" src="img/kuaitop.png" />
+									</el-col>
+									<el-col :span="12">
+										<div class="kuaiContent kuaiContent1">
+											<p>超薄水泥是新型设计类材料，需要特殊渠道，对接客户群体，公司有一套完整渠道业务体系，</p>
+											<p>指导加盟商速度拓展业务资源，保证销售和技术同时并行，达到快速成交。</p>
+											<p>精准客户收集，客户群体精准分类。多渠道进行市场推广</p>
+										</div>
+									</el-col>
+								</el-row>
+								<el-row>
+									<el-col :span="12">
+										<div class="kuaiContent kuaiContent2">
+											<p>已未每年在国内参加多场展会，进行推广，对接相应区域客户，</p>
+											<p>总部电商部设计师资源落地服务。派单对接。</p>
+											<p>对接精准客户，保证全国资源</p>
+											<p>总部提供精准推广模式，为加盟商提供宣传方案，总部更新案例数据，加盟商轻松转发，吸引行内关注，打造水泥制品标签。</p>
+										</div>
+									</el-col>
+									<el-col :span="12">
+										<img class="kuaiImg" src="img/kuaibottom.png" />
+									</el-col>
+								</el-row>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</article>
+			<b-menu></b-menu>
+			
+			<!--footer-->
+			<footer-box></footer-box>
+		</div>
+	</body>
+	<script src="js/comjs/vue2.5.16.js"></script>
+	<script src="js/comjs/emui.js"></script>
+	<script src="js/comjs/rely.js"></script>
+	<script type="text/javascript" src="js/comjs/nav.js" ></script>
+	<script>
+		//banner解决拉伸问题
+		//设置banner图片宽度为1920px,
+		//根据屏幕宽度，计算缩放的比例，然后把高度也缩放同等比例
+		//计算出来的值赋值给图片和图片盒子的高度属性
+		var app=new Vue({
+			el:'#app',
+			data:{
+				breadcrumb:[
+					'返回首页','渠道服务'
+				],
+			},
+			methods:{
+				jumpFn:function(item,index){
+					if(item == '返回首页'){
+						sessionStorage.setItem('navindex','0')
+						window.open('index.html','_self')
+					}
+				}
+			},
+			mounted:function(){
+				
+			}
+		})
+	</script>
+</html>

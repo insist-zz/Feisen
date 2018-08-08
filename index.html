@@ -23,7 +23,7 @@
 					    </el-carousel>
 					</div>
 					
-					<div class="advan-box">
+					<div class="advan-box" @click="openChannelFn">
 						<div class="advan-title">
 							一站式渠道招商服务
 						</div>
@@ -135,9 +135,9 @@
 				//导航默认选中项
 				activeIndex:'1',
 				bannerData:[
-					{src:'img/a.png',url:'a',text:'备注'},
-					{src:'img/b.png',url:'b',text:'备注'},
-					{src:'img/c.png',url:'c',text:'备注'}
+					{src:'img/a.jpg',url:'a',text:'备注'},
+					{src:'img/b.jpg',url:'b',text:'备注'},
+					{src:'img/c.jpg',url:'c',text:'备注'}
 				],
 				bannerimgheight:'0px'
 			},
@@ -145,6 +145,10 @@
 				openMore:function(){
 					sessionStorage.setItem('navindex','3')
 					window.open('news.html','_self')
+				},
+				openChannelFn:function(){
+					window.open('channelService.html','_self')
+					sessionStorage.setItem('navindex','2');
 				}
 			},
 			mounted:function(){
@@ -152,7 +156,7 @@
 				//计算图片宽高
 				var that=this,fullwidth=$(document).width();
 				//h=ih*(fw/iw)
-					var img_url ='img/a.png';
+					var img_url ='img/a.jpg';
 					var img = new Image();
 					img.src = img_url;
 					img.onload = function(){
