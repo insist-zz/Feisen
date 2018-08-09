@@ -72,6 +72,7 @@ header,nav,article{display: block;}
 header{padding: 10px 20px;height: 80px;box-sizing: border-box;
 z-index: 3;position: fixed;width: 100%;background: white;left: 0;top: 0;}
 .logobox{float: left;width: 100px;height: 60px;}
+.logoimg{width: 60px;height: 60px;display: block;margin: 0 auto;}
 nav{float: right;height: 60px;}
 .el-menu-item{font-size:16px;}
 /*body*/
