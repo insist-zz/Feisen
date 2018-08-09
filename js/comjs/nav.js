@@ -9,7 +9,7 @@ Vue.component('my-nav', {
   },
   template: '<header>'+
 				'<div class="logobox" style="line-height:40px;font-size:30px;text-indent:30px;"></div>'+
-				'<nav class="navbox" v-cloak>'+
+				'<nav class="navbox" v-cloak>'+ 
 					'<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" active-text-color="#409EFF" @select="cutNav">'+
 					  '<el-menu-item index="0">首页</el-menu-item>'+
 					  '<el-menu-item index="1">产品中心</el-menu-item>'+
