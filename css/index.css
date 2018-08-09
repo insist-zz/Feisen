@@ -14,8 +14,13 @@
 .advan-title{width: 100%;line-height: 80px;font-size: 30px;font-weight: 700;text-align: center;
 	letter-spacing:10px;margin-bottom: 20px;}
 
-.advan-box .el-col{line-height: 200px;text-align: center;font-size: 24px;}
-
+.advan-box .el-col{
+	line-height: 200px;text-align: center;font-size: 48px;
+	color: #333333;font-weight: bold;cursor: pointer;
+	}
+.advan-box .el-col:hover{
+	color:#409EFF;
+}
 
 /*//案例*/
 .casebox{width: 100%;box-sizing: border-box;padding: 20px 20px 50px 20px;height: auto;}

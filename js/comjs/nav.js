@@ -8,7 +8,7 @@ Vue.component('my-nav', {
   	}
   },
   template: '<header>'+
-				'<div class="logobox" style="line-height:40px;font-size:30px;text-indent:30px;">logo</div>'+
+				'<div class="logobox" style="line-height:40px;font-size:30px;text-indent:30px;"></div>'+
 				'<nav class="navbox" v-cloak>'+
 					'<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" active-text-color="#409EFF" @select="cutNav">'+
 					  '<el-menu-item index="0">首页</el-menu-item>'+
@@ -81,10 +81,11 @@ Vue.component('footer-box', {
 						  '<el-col :span="8">'+
 						  	'<div class="footleft">'+
 						  		'<p>Contact & 联系我们</p>'+
-						  		'<div>北京市朝阳区来广营中街朝来科技园<br/>(创远路36号园3号楼)</div>'+
-						  		'<p>企业邮箱:hi@qudaosujian.com</p>'+
-						  		'<p>邮编&100012</p>'+
-						  		'<p>网站:WWW.QDSJ.COM</p>'+
+						  		'<div>河北省秦皇岛海港区文坛路远洋商务大厦19层</div>'+
+						  		'<p>招商电话:400-0335-009</p>'+
+						  		'<p>企业邮箱:</p>'+
+						  		'<p>邮编&</p>'+
+						  		'<p>网站:</p>'+
 						  	'</div>'+
 						  '</el-col>'+
 						  '<el-col :span="8">'+

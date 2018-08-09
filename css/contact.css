@@ -84,7 +84,7 @@
 }
 
 .ctimgbox{height: auto;width: 100%;position: relative;}
-.fullimg{width: 100%;height: auto;}
+.fullimg{width: 60%;height: auto;display: block;margin: 20px auto;}
 .contactbox{width: 400px;height: 300px;position: absolute;bottom: 0;right: 0;z-index: 1;}
 
 .infobox{width: 300px;margin-left: 80px;}

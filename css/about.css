@@ -213,13 +213,16 @@ position: absolute;left: 0;bottom: 0;}
 
 .applyBox3 img{width: 840px;height: 560px;display: block;float: left;}
 .applyBox3 .applyTx{width: 360px;height: 560px;box-sizing: border-box;padding-top:100px;float: left;}
-.atxtl span{position: absolute;display: block;width: 20px;height: 20px;box-sizing: border-box;}
-.atxtl{position: relative;margin: 0 auto;  width: 250px;height: 70px;padding: 15px 25px;box-sizing: border-box;background: white;}
+.atxtl span{position: absolute;display: block;width: 14px;height: 14px;box-sizing: border-box;}
+.atxtl{
+	position: relative;margin: 0 auto;  width: 220px;height: 70px;
+	padding: 15px 25px;box-sizing: border-box;background: white;
+}
 .atxtl .one{left: 0;top: 0;border-left: 2px solid #333333;border-top: 2px solid #333333;}
 .atxtl .two{right: 0;top: 0;border-right: 2px solid #333333;border-top: 2px solid #333333;}
 .atxtl .three{left: 0;bottom: 0;border-left: 2px solid #333333;border-bottom: 2px solid #333333;}
 .atxtl .four{right: 0;bottom: 0;border-right: 2px solid #333333;border-bottom: 2px solid #333333;}
-.atxtl .five{width: 200px;height: 40px;background: #d5b083;color: white;font-size: 24px;line-height: 40px;text-align: center;}
+.atxtl .five{width: 170px;height: 40px;background: #d5b083;color: white;font-size: 24px;line-height: 40px;text-align: center;}
 .atxct1{
 	width: 320px;height: auto;line-height: 30px;font-size: 16px;color: #333333;
 	margin: 30px auto 0 auto;text-align: center;
@@ -253,15 +256,15 @@ position: absolute;left: 0;bottom: 0;}
 }
 .imgBox1 .imgBoxC{
 	width: 340px;height: 260px;float: right;margin-top: 150px;background: #d5b083;
-	box-sizing: border-box;border:1px solid #d5b083;
+	box-sizing: border-box;border:1px solid #d5b083;padding: 40px 0 60px 0;
 }
 
 .imgBox1 .imgBoxC p:first-child{
-	color: white;font-size: 18px;line-height: 50px;width: 100%;height: 50px;
+	color: white;font-size: 20px;line-height: 50px;width: 100%;height: 50px;
 	text-align: center;font-weight: bold;
 	}
 .imgBox1 .imgBoxC p:last-child{
-	color: #764407;font-size: 14px;line-height: 30px;width: 260px;height: auto;
+	color: #764407;font-size: 16px;line-height: 30px;width: 260px;height: auto;
 	text-align: center;margin: 0 auto;
 }
 
