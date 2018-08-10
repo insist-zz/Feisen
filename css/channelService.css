@@ -164,8 +164,12 @@
 .kuaiContent2 p{
 	text-align: left;
 }
+.blueBlock{
+	width:100px;height: 20px;margin-bottom: 20px;
+	background: #70c2e8;
+}
 .kuaiContent{
-	padding-top: 200px;box-sizing: border-box;width: 400px;
+	padding-top: 160px; box-sizing: border-box;width: 400px;
 	margin: 0 auto;
 }
 .kuaiContent p{
