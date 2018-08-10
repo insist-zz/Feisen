@@ -14,11 +14,11 @@
 .advan-title{width: 100%;line-height: 80px;font-size: 30px;font-weight: 700;text-align: center;
 	letter-spacing:10px;margin-bottom: 20px;}
 
-.advan-box .el-col{
+.advan-box .el-col div{
 	line-height: 200px;text-align: center;font-size: 48px;
-	color: #333333;font-weight: bold;cursor: pointer;
+	color: #333333;font-weight: bold;cursor: pointer;height: 200px;
 	}
-.advan-box .el-col:hover{
+.advan-box .el-col div:hover{
 	color:#409EFF;
 }
 

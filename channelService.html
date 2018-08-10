@@ -46,7 +46,7 @@
 								<div class="topThreeBox">
 									<el-row>
 										<el-col :span="8">
-											<div class="topThreeItem z-depth-2 tti1">
+											<div class="topThreeItem z-depth-3 tti1">
 												<div class="tti-cir1">
 													<img src="img/chenggonganli/01_03.png" />
 												</div>
@@ -57,7 +57,7 @@
 											</div>
 										</el-col>
 										<el-col :span="8">
-											<div class="topThreeItem z-depth-2 tti2">
+											<div class="topThreeItem z-depth-3 tti2">
 												<div class="tti-cir2">
 													<img src="img/chenggonganli/02_03.png" />
 												</div>
@@ -68,7 +68,7 @@
 											</div>
 										</el-col>
 										<el-col :span="8">
-											<div class="topThreeItem z-depth-2 tti3">
+											<div class="topThreeItem z-depth-3 tti3">
 												<div class="tti-cir3">
 													<img src="img/chenggonganli/03_03.png" />
 												</div>
@@ -81,7 +81,15 @@
 									</el-row>
 								</div>
 								
-								<div class="cardItemBox z-depth-3 z-depth-2">
+							</div>
+						
+						
+						
+							
+							<div class="cb-item zhuanBox">
+								
+								
+								<div class="cardItemBox z-depth-3 z-depth-3">
 									<img class="textimg" src="img/zhuan.jpg" />
 									<p class="rightTitle">资深的服务团队</p>
 									<div class="centerLine">
@@ -104,12 +112,7 @@
 									</div>
 								</div>
 								
-							</div>
-						
-						
-						
-							
-							<div class="cb-item">
+								
 								<div class="cbi-titlebox">
 									<h3>总部对合作伙伴提供全方位的支持</h3>
 									<p></p>
@@ -117,6 +120,13 @@
 								<div class="flowBox">
 									<img src="img/zhuankuaiquan.png" />
 								</div>
+								
+							</div>
+						
+						
+						
+							
+							<div class="cb-item quanBox">
 								
 								<div class="cardItemBox z-depth-3">
 									<img class="textimg" src="img/quan.jpg" />
@@ -136,17 +146,6 @@
 										</p>
 									</div>
 								</div>
-								
-							</div>
-						
-						
-						
-							
-							<div class="cb-item">
-								<div class="cbi-titlebox">
-									<h3>总部对合作伙伴提供全方位的支持</h3>
-									<p></p>
-								</div>
 								<p class="cbi-content">
 									一种厚度仅为3mm的水泥面层材料，科技含量高，施工简单，还原清水混凝土质感。
 									由于纳米水泥粘度高强度大，可以说各种空间都可以涂刷。墙面装饰、旧房改造，瓷砖 玻璃基层直接施工，桌面、柜子、台面。特殊的属性使
@@ -155,6 +154,12 @@
 								<div class="flowBox">
 									<img src="img/traitW.png" />
 								</div>
+								
+								
+							</div>
+							
+							
+							<div class="cb-item kuaiBox">
 								
 								<div class="cardItemBox z-depth-3">
 									<img class="textimg" src="img/kuai.jpg" />
@@ -174,19 +179,13 @@
 										</p>
 									</div>
 								</div>
-								
-							</div>
-							
-							
-							<div class="cb-item">
-								
 								<el-row>
 									<el-col :span="12">
 										<img class="kuaiImg" src="img/kuaitop.png" />
 									</el-col>
 									<el-col :span="12">
 										<div class="kuaiContent kuaiContent1">
-											<p>超薄水泥是新型设计类材料，需要特殊渠道，对接客户群体，公司有一套完整渠道业务体系，</p>
+											<p>纳米水泥是新型设计类材料，需要特殊渠道，对接客户群体，公司有一套完整渠道业务体系，</p>
 											<p>指导加盟商速度拓展业务资源，保证销售和技术同时并行，达到快速成交。</p>
 											<p>精准客户收集，客户群体精准分类。多渠道进行市场推广</p>
 										</div>
@@ -244,6 +243,23 @@
 			},
 			mounted:function(){
 				
+				var str = window.location.search;
+				var a = str.substr(str.length-1);
+				//console.log(a)
+				//console.log($('.zhuanBox').offset().top)
+				//console.log($('.quanBox').offset().top)
+				//console.log($('.kuaiBox')[0].offsetTop)
+				var num=0;
+				if(a == '1'){
+					num = $('.zhuanBox').offset().top-130;
+				}else if(a == '2'){
+					num = $('.quanBox').offset().top-130;
+				}else if(a == '3'){
+					num = $('.kuaiBox').offset().top-130;
+				}else{
+					num=0
+				}
+				$("html,body").animate({scrollTop:num},500);
 			}
 		})
 	</script>

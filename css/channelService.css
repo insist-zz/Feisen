@@ -36,8 +36,9 @@
 	height: auto;width: 100%;margin: 30px 0;
 	/*border-bottom: 1px solid #c9cacb;*/
 }
-.cbi-titlebox{width: 100%;text-align: center;
-    border-bottom: 1px solid #898989;position: relative;
+.cbi-titlebox{
+	width: 1000px;text-align: center;
+    border-bottom: 1px solid #898989;position: relative;margin: 0 auto;
 	}
 .cbi-titlebox h3{font-size: 28px;margin: 0;
     color: #333333;
@@ -104,7 +105,7 @@
 
 /*卡片*/
 .cardItemBox{
-	width: 1160px;margin: 0 auto;height: 280px;border-radius: 20px;border:1px solid white;
+	width: 1160px;margin: 0 auto 80px auto;height: 280px;border-radius: 20px;border:1px solid white;
 	padding: 0 40px 0 80px;box-sizing: border-box;position: relative;
 }
 .textimg{
@@ -141,10 +142,10 @@
 
 /*流程图*/
 .flowBox{
-	width: 1000px;height: auto;margin: 30px auto;
+	width: 1160px;height: auto;margin: 30px auto;
 }
 .flowBox img{
-	width: 1000px;height: auto;display: block;
+	width: 1160px;height: auto;display: block;
 }
 
 

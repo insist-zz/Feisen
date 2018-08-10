@@ -22,14 +22,20 @@
 					    </el-carousel>
 					</div>
 					
-					<div class="advan-box" @click="openChannelFn">
+					<div class="advan-box">
 						<div class="advan-title">
 							一站式渠道招商服务
 						</div>
-						<el-row title="点击查看详情">
-						  <el-col :span="9">专</el-col>
-						  <el-col :span="6">全</el-col>
-						  <el-col :span="9">快</el-col>
+						<el-row title="点击查看详情" >
+						  <el-col :span="9" >
+						  	<div @click="openChannelFn(1)">专</div>
+						  </el-col>
+						  <el-col :span="6">
+						  	<div @click="openChannelFn(2)">全</div>
+						  </el-col>
+						  <el-col :span="9">
+						  	<div @click="openChannelFn(3)">快</div>
+						  </el-col>
 						</el-row>
 					</div>
 					
@@ -145,8 +151,9 @@
 					sessionStorage.setItem('navindex','3')
 					window.open('news.html','_self')
 				},
-				openChannelFn:function(){
-					window.open('channelService.html','_self')
+				openChannelFn:function(a){
+					console.log(a)
+					window.open('channelService.html?a='+a,'_self')
 					sessionStorage.setItem('navindex','2');
 				}
 			},
