@@ -10,6 +10,9 @@
 /*优势*/
 .advan-box{
 	width: 100%;box-sizing: border-box;padding: 20px;height: auto;
+	
+	
+	
 }
 .advan-title{width: 100%;line-height: 80px;font-size: 30px;font-weight: 700;text-align: center;
 	letter-spacing:10px;margin-bottom: 20px;}
@@ -36,12 +39,25 @@ left: 50%;margin-left:-100px;bottom: -2px;z-index: 1;}
 	width:100%;height: auto;margin: 20px auto;
 	display: -webkit-flex; display: flex;
 	 justify-content:space-around;align-items:center;flex-wrap:wrap;
+	 align-content:flex-start;
 }
+
 .caseimg-one{width: 300px;height: 450px;position: relative;margin-bottom: 20px;}
 .caseimg-one img{width: 300px;height: 450px;}
 .caseimg-one .card{padding: 20px 0; width: 300px;height:60px;position: absolute;left: 0;bottom: 0;background: #7a7a7a;}
 .caseimg-one .card p{width: 300px;line-height: 30px;text-align: center;color: white;cursor: pointer;}
 
+.caseimg_box1{
+	width:100%;height: auto;margin: 20px auto;
+}
+.caseimg_box1 .el-carousel__arrow--left,.caseimg_box1 .el-carousel__arrow--right{
+	display: none;
+}
+/*#c0c4cc*/
+.caseimg_box1 .el-carousel__indicators--outside button {
+    background-color: #409EFF;
+    opacity: 1;
+}
 
 /*新闻动态*/
 .newsbox{width: 100%;box-sizing: border-box;padding: 0 50px;}
@@ -52,7 +68,10 @@ left: 50%;margin-left:-100px;bottom: -2px;z-index: 1;}
 }
 .tradebox{position: relative;width: 100%;height: 400px;}
 .tradeimg{background: white; width: 156px;height: 400px;overflow-y:auto;position: absolute;left: 0;top: 0;z-index: 1;}
-.tradeimg img{width: 140px;height: 140px; margin-bottom: 10px;border: none;display: block;}
+.tradeimg img{
+	width: 140px;height: 140px; margin-bottom: 10px;
+	display: block;box-sizing: border-box;
+	}
 
 .treadtextbox{position: absolute; width: 100%;height:400px;padding: 10px 20px 10px 166px;
 left: 0;top: 0;box-sizing: border-box;z-index:0;z-index: 0;}
@@ -60,12 +79,12 @@ left: 0;top: 0;box-sizing: border-box;z-index:0;z-index: 0;}
 
 /*右侧新闻列表*/
 .newright ul{height: 400px;width: 100%;}
-.newright ul li{cursor: pointer; position: relative; height: 30px;box-sizing: border-box;border-bottom: 1px #c5c5c5 dashed;}
+.newright ul li{cursor: pointer; position: relative; height: 40px;box-sizing: border-box;border-bottom: 1px #c5c5c5 dashed;}
 .newright ul li .p1:hover{color: #66b1ff;}
-.newright ul li .p1{text-align: left; font-size: 14px;float: left;width: 280px;line-height: 30px;margin-left: 20px;}
-.newright ul li .p2{text-align: right;font-size: 12px;float: right;width: 160px;line-height: 30px;}
+.newright ul li .p1{text-align: left; font-size: 14px;float: left;width: 280px;line-height: 40px;margin-left: 20px;}
+.newright ul li .p2{text-align: right;font-size: 12px;float: right;width: 160px;line-height: 40px;}
 .newright ul li span{position: absolute;width: 6px;height: 6px;position: absolute;
-left: 6px;top: 12px;border-radius: 8px;background: #888888;}
+left: 6px;top: 16px;border-radius: 8px;background: #888888;}
 
 
 

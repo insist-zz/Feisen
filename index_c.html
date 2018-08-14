@@ -12,7 +12,15 @@
 		.curImg{
 			border:2px solid #66b1ff;
 		}
-	
+		.carItem{
+			width: 100%;
+			height: 400px;
+		}
+		/*.carItem{
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url(img/banner/a.jpg);
+		}*/
 	</style>
 	<body>
 		<div id="app">
@@ -20,11 +28,17 @@
 			
 			<article>
 				<div class="articlebox">
-					<div class="bannerbox">
-						<!-- v-bind:style="{ height: bannerimgheight+'px'}"-->
+					<!--<div class="bannerbox">
 						<el-carousel v-bind:height="bannerimgheight">
 					      <el-carousel-item v-for="item in bannerData" :key="item">
 					        <img style="display: block;width: 100%;" v-bind:style="{ height: bannerimgheight}" :src="item.src" :alt="item.text" @click="console.log(item.url)" />
+					      </el-carousel-item>
+					    </el-carousel>
+					</div>-->
+					<div class="bannerbox">
+						<el-carousel height="400px">
+					      <el-carousel-item v-for="item in bannerData" :key="item.src">
+					        <div class="carItem"></div>
 					      </el-carousel-item>
 					    </el-carousel>
 					</div>
@@ -387,6 +401,16 @@
 					 console.log(img.height*(fullwidth/img.width))
 					 that.bannerimgheight=parseInt(img.height*(fullwidth/img.width))+'px'
 					};
+				
+				
+				var banners = this.bannerData;
+				for(var i=0;i<banners.length;i++){
+					$('.carItem').eq(i).css({
+						'background-image':'url('+ banners[i].src +')',
+						'background-repeat':'no-repeat',
+						'background-position':'center'
+					})
+				}
 				
 				//登录
 				this.login();

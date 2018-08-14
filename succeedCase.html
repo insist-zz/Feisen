@@ -45,21 +45,18 @@
 									</div>
 									<div class="con-body">
 										<ul class="con-body-item">
-											<li v-for="item in 12">
-												<img src="img/chenggonganli/case1.png" />
+											<li v-for="item in caseDataFn">
+												<img :src="item.pics[0]" />
 												<div class="cbodyi-tbox">
 													<div class="cbodyi-tbox-top">
-														<p class="bigtitle">缤果时光</p>
-														<p class="smtitle">因时代而生，就这个调调儿</p>
+														<p class="bigtitle">{{ item.title }}</p>
+														<p class="smtitle">{{ item.descr }}</p>
 														<p class="stext">
-															Jul 20, 2016<br/>
-                      										Banking & Insurance<br/>
-                      										Readed : 83<br/>
-                      										Tag : Catering Drinks Mix
+															{{ item.addtime }}<br/>
 														</p>
 													</div>
 													<div class="cbodyi-tbox-bottom">
-														<el-button type="text">查看详情<i class="el-icon-d-arrow-right el-icon--right"></i></el-button>
+														<!--<el-button type="text">查看详情<i class="el-icon-d-arrow-right el-icon--right"></i></el-button>-->
 													</div>
 												</div>
 											</li>
@@ -89,12 +86,19 @@
 		//设置banner图片宽度为1920px,
 		//根据屏幕宽度，计算缩放的比例，然后把高度也缩放同等比例
 		//计算出来的值赋值给图片和图片盒子的高度属性
+		var that=null;
+		var userToken = sessionStorage.getItem('userToken');
+		console.log(userToken)
+		if(!userToken){
+			window.open('index.html','_self');
+		}
 		var app=new Vue({
 			el:'#app',
 			data:{
 				breadcrumb:[
 					'返回首页','成功案例'
 				],
+				caseDataFn:[]
 			},
 			methods:{
 				jumpFn:function(item,index){
@@ -104,10 +108,53 @@
 						sessionStorage.setItem('navindex','0')
 						window.open('index.html','_self')
 					}
-				}
+				},
+				queryCaseFn:function(pars){
+					
+					$.ajax({
+					      url: officialUrl+'/main/doc/queryListCase?currentPage=1&pageSize=1000&token='+userToken,
+					      type: 'GET',
+//					      headers:{
+//								token:userToken
+//							},
+//						  data:pars,	
+					      success: function(res) {
+					      	 console.log(res);
+					      	 if(res.code == '1'){
+					      	 	var data = res.result.list;
+					      	 	for(var i=0;i<data.length;i++){
+					      	 		data[i].addtime = timeChange(data[i].addtime)
+					      	 		var pics=data[i].fileName.split(',');
+					      	 		data[i].pics=[];
+									for(var m=0;m<pics.length;m++){
+										data[i].pics.push(picExcelUrl+pics[m])
+									}
+					      	 	}
+					      	 	console.log(data)
+					      	 	that.caseDataFn=data;
+					      	 }else{
+					      	 	that.successHF(res.msg)
+					      	 }
+					      	 
+					      },
+					      error: function(e) {
+					         console.log(e);
+					         that.errorHF('请求错误');
+					      }
+					  })
+				},
+				//成功文字提示
+			    successHF:function(text){
+			    	this.$message({message: text,type: 'success'});
+			    },
+			    //错误文字提示
+			    errorHF:function(text){
+			    	this.$message.error(text);
+			    }
 			},
 			mounted:function(){
-				
+				that=this;
+				this.queryCaseFn();
 			}
 		})
 	</script>

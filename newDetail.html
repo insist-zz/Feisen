@@ -7,6 +7,39 @@
 		<link rel="stylesheet" href="css/comcss/com.css" />
 		<link rel="stylesheet" href="css/news.css" />
 	</head>
+	<style>
+		.cb0{
+			max-width: 1200px;
+		}
+		.n_titlebox{
+			height: auto;
+			width: 100%;
+		}
+		.bigT{
+			width: 100%;height: 50px;line-height: 50px;font-size: 18px;
+			text-align: center;color: #333333;
+		}
+		.smallT{
+			width:250px;height: 30px;line-height: 30px;font-size: 16px;
+			text-align: center;color: #888888;margin: 0 auto;
+		}
+		.smallT span:first-child{margin-right: 50px;}
+		.n_pic{
+			display: block;margin: 20px auto;max-width: 700px;width: 100%;
+			height: auto;
+		}
+		.n_content{
+			width: 100%;max-width: 700px;height: auto;margin: 0 auto;
+		}
+		.n_content p{
+			height: auto;line-height: 30px;color: #666666;font-size: 14px;
+			text-align: left;text-indent: 20px;
+		}
+		.leftTitleBox{
+			width: 280px;height: 50px;line-height: 50px;text-align: left;
+			font-size: 18px;font-weight: bold;color: #333333;
+		}
+	</style>
 	<body>
 		<div id="app">
 			<my-nav></my-nav>
@@ -32,88 +65,46 @@
 										<p>新闻中心</p>
 									</div>
 								</el-col>
-								<el-col :span="14">
-									<div class="c-h-right">
-										<el-radio-group v-model="type" @change="typeCutFn">
-									      <el-radio-button label="行业资讯"></el-radio-button>
-									      <el-radio-button label="企业动态"></el-radio-button>
-									    </el-radio-group>
-									</div>
-								</el-col>
 							</el-row>
 						</div>
 						<div class="c-body">
-							<div class="c-b cb0" v-show="typeShow[0]"> 
+							<div class="c-b cb0"> 
+								
+								
+								
+								
 								<div class="cb-leftbox">
-									<img src="img/news/hangye.jpg" />
+									<p class="leftTitleBox">
+										更多新闻
+									</p>
 									<ul v-cloak>
-										<li v-for="item in tradeData" @click="openNewDetail(item)">
+										<li v-for="item in leftData"  @click="openNewDetail(item)">
 											<a>{{ item.title }}</a>
 											<span></span>
 										</li>
 									</ul>
 								</div>
 								<div class="cb-rightbox">
-									<ul v-cloak>
-										<li v-for="item in tradeData" @click="openNewDetail(item)">
-											<img class="itemBimg" :src="item.pics[0]" />
-											<div class="ncenter"></div>
-											<div class="newsitembox">
-												<div class="newslistb">
-													<p class="topText">
-														<i class="el-icon-time"></i>
-														<span>{{ item.addtime }}</span>
-														<!--<img src="img/icon/pl.png" />-->
-														<!--<span>{{ item.comment }}</span>-->
-													</p>
-													<p class="cenTitle">
-														{{ item.title }}
-													</p>
-													<p class="icon">
-														<img src="img/icon/sousuo.png" />
-													</p>
-												</div>
-											</div>
-										</li>
-									</ul>
+									<div class="n_titlebox">
+										<p class="bigT">{{ detailData.title }}</p>
+										<p class="smallT">
+											<span>{{ detailData.titleSub }}</span>
+											<span>{{ detailData.addtime }}</span>
+										</p>
+									</div>
+									
+									<img v-for="item in detailData.pics" class="n_pic" :src="item"/>
+									
+									<div class="n_content">
+										<p v-for="item in detailData.contents">
+											{{ item }}
+										</p>
+									</div>
 								</div>
+								
 							</div>
 							
-							<div class="c-b cb0" v-show="typeShow[1]"> 
-								<div class="cb-leftbox">
-									<img src="img/news/qiye.jpg" />
-									<ul v-cloak>
-										<li v-for="item in enterData"  @click="openNewDetail(item)">
-											<a>{{ item.title }}</a>
-											<span></span>
-										</li>
-									</ul>
-								</div>
-								<div class="cb-rightbox">
-									<ul v-cloak>
-										<li v-for="item in enterData" @click="openNewDetail(item)">
-											<img class="itemBimg" :src="item.pics[0]" />
-											<div class="ncenter"></div>
-											<div class="newsitembox">
-												<div class="newslistb">
-													<p class="topText">
-														<i class="el-icon-time"></i>
-														<span>{{ item.addtime }}</span>
-														<!--<img src="img/icon/pl.png" />
-														<span>{{ item.comment }}</span>-->
-													</p>
-													<p class="cenTitle">
-														{{ item.title }}
-													</p>
-													<p class="icon">
-														<img src="img/icon/sousuo.png" />
-													</p>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
+							
 						</div>
 					</div>
 					
@@ -138,7 +129,6 @@
 		
 		var that=null;
 		var userToken = sessionStorage.getItem('userToken');
-		console.log(userToken)
 		if(!userToken){
 			window.open('index.html','_self');
 		}
@@ -147,12 +137,13 @@
 			el:'#app',
 			data:{
 				type:'行业资讯',
-				typeShow:[true,false],
 				breadcrumb:[
 					'返回首页','新闻中心','行业资讯'
 				],
-				tradeData:[],
-				enterData:[]
+				leftData:[],
+				detailData:{
+					pics:['img/logo.png']
+				}
 			},
 			methods:{
 				jumpFn:function(item,index){
@@ -161,27 +152,51 @@
 					if(item == '返回首页'){
 						sessionStorage.setItem('navindex','0')
 						window.open('index.html','_self')
-					}else if(item=='新闻中心'){
-						this.typeShow=[true,false];
-						this.breadcrumb[2] = '行业资讯';
-					}
-				},
-				typeCutFn:function(item){
-					this.type=item;
-					if(item == '行业资讯'){
-						this.typeShow=[true,false];
-						this.breadcrumb[2] = '行业资讯'
-					}else if(item == '企业动态'){
-						this.typeShow=[false,true];
-						this.breadcrumb[2] = '企业动态'
+					}else if(item == '新闻中心'){
+						window.open('news.html','_self')
 					}
 				},
 				
 				
 				//查询动态
+				queryDataFn:function(id){
+					$.ajax({
+					      url: officialUrl+'/main/doc/newsDetail?id='+id+'&token='+userToken,
+					      type: 'GET',
+//					      headers:{
+//								token:userToken
+//							},	
+					      success: function(res) {
+					      	 console.log(res);
+					      	 
+					      	 if(res.code == '1'){
+					      	 	var data = res.result;
+					      	 	data.addtime = timeChange(data.addtime)
+				      	 		var pics=data.fileName.split(',');
+				      	 		data.pics=[];
+								for(var m=0;m<pics.length;m++){
+									data.pics.push(picExcelUrl+pics[m])
+								}
+								data.contents = data.content.split('<br/>');
+								console.log(data.contents)
+								that.breadcrumb.push(data.title)
+					      	 	that.detailData = data;
+					      	 }else{
+					      	 	that.successHF(res.msg)
+					      	 }
+					      	 
+					      },
+					      error: function(e) {
+					         console.log(e);
+					         that.errorHF('请求错误');
+					      }
+					  })
+				},
+				
+				//查询动态
 				queryEnterpriseFn:function(){
 					$.ajax({
-					      url: officialUrl+'/main/doc/queryListNews?currentPage=1&pageSize=8&newsType=2&token='+userToken,
+					      url: officialUrl+'/main/doc/queryListNews?currentPage=1&pageSize=20&newsType=2&token='+userToken,
 					      type: 'GET',
 //					      headers:{
 //								token:userToken
@@ -200,11 +215,7 @@
 									}
 					      	 	}
 					      	 	
-					      	 	console.log(that.tradeImgs)
-								
-								//添加数据
-					      	 	console.log(data)
-					      	 	that.enterData = data;
+					      	 	that.leftData = data;
 					      	 }else{
 					      	 	that.successHF(res.msg)
 					      	 }
@@ -219,7 +230,7 @@
 				
 				queryTradeFn:function(pars){
 					$.ajax({
-					      url: officialUrl+'/main/doc/queryListNews?currentPage=1&pageSize=8&newsType=1&token='+userToken,
+					      url: officialUrl+'/main/doc/queryListNews?currentPage=1&pageSize=20&newsType=1&token='+userToken,
 					      type: 'GET',
 //					      headers:{
 //								token:userToken
@@ -237,9 +248,7 @@
 										data[i].pics.push(picExcelUrl+pics[m])
 									}
 					      	 	}
-								that.tradeData=data;
-								that.curTradeData=data[0];
-					      	 	console.log(that.tradeData)
+								that.leftData = data;
 					      	 }else{
 					      	 	that.successHF(res.msg)
 					      	 }
@@ -251,10 +260,7 @@
 					      }
 					  })
 				},
-				openNewDetail:function(info){
-					console.log(info);
-					window.open('newDetail.html?type='+info.newsType+'&id='+info.id,'_self')
-				},
+				
 				//成功文字提示
 			    successHF:function(text){
 			    	this.$message({message: text,type: 'success'});
@@ -262,27 +268,34 @@
 			    //错误文字提示
 			    errorHF:function(text){
 			    	this.$message.error(text);
-			    }
+			    },
+			    openNewDetail:function(info){
+					console.log(info);
+					window.open('newDetail.html?type='+info.newsType+'&id='+info.id,'_self')
+				}
 			},
 			mounted:function(){
 				that=this;
 				//$('.cb0').css('height',$('.cb-rightbox').height());
-				
 				var str = window.location.search;
-				var a = str.substr(str.length-1);
-				console.log(str);
+				str = str.substr(1,str.length-1).split('&');
+				var type = {};
+				for(var i=0;i<str.length;i++){
+					var child = str[i].split('=');
+					type[child[0]] = child[1];
+				}
+				console.log(type);
 				
-				if(a == '1'){
-					this.type='行业资讯';
-					this.typeShow=[true,false];
-				}else if(a == '2'){
-					this.type='企业动态';
-					this.typeShow=[false,true];
+				if(type.type == '1'){ //行业资讯
+					this.breadcrumb=['返回首页','新闻中心','行业资讯详情'];
+					this.queryTradeFn();
+				}else if(type.type == '2') { //企业动态
+					this.breadcrumb=['返回首页','新闻中心','企业动态详情'];
+					this.queryEnterpriseFn()
 				}
 				
-				//请求资讯和动态
-				this.queryEnterpriseFn()
-				this.queryTradeFn();
+				this.queryDataFn(type.id)
+				
 				
 			}
 		})

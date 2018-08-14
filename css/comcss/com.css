@@ -151,3 +151,8 @@ background: #343839;}
 *{
 	font-family:dongqing;
 	}
+
+
+.maxWidth{
+	max-width: 1300px;margin: 0 auto;
+}
